@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">AguaDaSerraApp</string>
+    <string name="app_package">com.aguadaserra.app</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="default_notification_channel_id">fcm_default_channel</string>
+
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra fringilla justo a rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In vulputate in diam at faucibus.</string>
+    <string name="no_connection">Sem conexão</string>
+    <string name="no_connection_description">Certifique-se de que está conectado a internet e tente novamente.</string>
+    <string name="understood">Entendido</string>
+    <string name="error">Ocorreu um erro</string>
+    <string name="foreign_error">Erro desconhecido</string>
+    <string name="try_again">Tentar novamente</string>
+    <string name="cancel">Cancelar</string>
+
 </resources>
