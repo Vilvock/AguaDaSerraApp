@@ -19,5 +19,10 @@
     <string name="enable">Ativar</string>
     <string name="exit">Sair</string>
     <string name="attention">Atenção</string>
+    <string name="home">Home</string>
+    <string name="cart">Carrinho</string>
+    <string name="orders">Meus Pedidos</string>
+    <string name="favorites">Meus Favoritos</string>
+    <string name="my_profile">Meu Perfil</string>
 
 </resources>

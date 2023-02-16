@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/follow_option"
+        android:title="Seguir"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/feed_option"
+        android:title="Ver Feed"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/sendLocation_option"
+        android:title="Enviar Localização"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/deleteHistory_option"
+        android:title="Excluir Histórico"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/share_option"
+        android:title="Encaminhar"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/report_option"
+        android:title="Denunciar"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/update_option"
+        android:title="Editar"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/delete_option"
+        android:title="Excluir"
+        android:visible="false"/>
+
+
+</menu>

@@ -1,18 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/rootView"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!--    app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <!--            app:layout_scrollFlags="scroll|enterAlways"-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/toolbarTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_weight="1"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="16dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size6"
+                    tools:text="Titulo" />
+
+<!--                <TextView-->
+<!--                    android:id="@+id/filter_tv"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="?actionBarSize"-->
+<!--                    android:layout_weight="0"-->
+<!--                    android:drawableStart="@drawable/ic_filter_meeting_places"-->
+<!--                    android:drawablePadding="8dp"-->
+<!--                    android:layout_marginStart="0dp"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/text_size4"-->
+<!--                    tools:text="Filtros"-->
+<!--                    android:visibility="gone"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/info_tv"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="?actionBarSize"-->
+<!--                    android:layout_weight="0"-->
+<!--                    android:drawableStart="@drawable/ic_info_circle"-->
+<!--                    android:drawablePadding="8dp"-->
+<!--                    android:layout_marginStart="0dp"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/text_size4"-->
+<!--                    tools:text="Filtros"-->
+<!--                    android:visibility="gone"/>-->
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <fragment
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:defaultNavHost="true"
+            />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav_view_bottomnav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@color/white"
+            app:itemIconSize="24dp"
+            app:itemIconTint="@drawable/selector_bottom_nav"
+            app:menu="@menu/bottom_nav_menu"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
