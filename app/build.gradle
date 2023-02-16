@@ -85,4 +85,8 @@ dependencies {
 
     //rxjavaandroid
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.0'
+
+    //load circle
+    implementation 'me.relex:circleindicator:2.1.4'
+    implementation 'me.relex:circleindicator:2.1.4@aar'
 }

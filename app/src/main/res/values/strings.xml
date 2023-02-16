@@ -14,5 +14,10 @@
     <string name="foreign_error">Erro desconhecido</string>
     <string name="try_again">Tentar novamente</string>
     <string name="cancel">Cancelar</string>
+    <string name="disable_gps">GPS desativado!</string>
+    <string name="disable_gps_description">Seu GPS parece estar desativado, é necessário ativá-lo para prosseguir.</string>
+    <string name="enable">Ativar</string>
+    <string name="exit">Sair</string>
+    <string name="attention">Atenção</string>
 
 </resources>
