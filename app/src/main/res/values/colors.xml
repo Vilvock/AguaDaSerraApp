@@ -13,11 +13,14 @@
     <color name="colorAccent">#FFFFFF</color>
 
 
+    <color name="lightBlueApplication">#F4FDFF</color>
     <color name="lightGrayApplication">#E0E0E0</color>
 
     <!--text hint-->
     <color name="grayApplication">#6C757D</color>
     <!--text normal-->
     <color name="gray2Application">#3C3C3C</color>
+
+    <color name="facebookBtColor">#1977F3</color>
 
 </resources>
