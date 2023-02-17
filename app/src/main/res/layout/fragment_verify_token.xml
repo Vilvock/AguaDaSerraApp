@@ -12,25 +12,35 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:text="Verificar Token"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size7"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal"
             android:layout_weight="1"
+            android:gravity="center_horizontal"
             android:orientation="vertical"
             android:padding="20dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Verificação do Token"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size7"
-                android:textStyle="bold"
-                android:textAlignment="center"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -38,45 +48,23 @@
                 android:text="É necessário inserir o Token enviado por e-mail para prosseguir."
                 android:layout_marginTop="24dp" />
 
-            <LinearLayout
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:orientation="vertical">
+                android:layout_marginTop="12dp"
+                android:layout_weight="0"
+                android:textColorHint="@color/grayApplication">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Token" />
-
-                <LinearLayout
+                <EditText
+                    android:id="@+id/token_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:orientation="horizontal">
+                    android:hint="Token"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
 
-                    <EditText
-                        android:id="@+id/token_et"
-                        style="@style/mainEditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:inputType="text" />
-
-                    <ImageView
-                        android:id="@+id/tokenChecked_iv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginEnd="12dp"
-                        android:layout_weight="0"/>
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.aguadaserra.app.global_ui.components.ProgressButton
@@ -87,16 +75,17 @@
                 android:layout_marginTop="24dp"
                 android:text="Prosseguir" />
 
+
         </LinearLayout>
 
-
-
         <TextView
-            android:id="@+id/signIn_tv"
-            android:layout_width="wrap_content"
+            android:id="@+id/signUp_tv"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="0"
             android:layout_margin="36dp"
-            android:text="Realize seu login! Entre aqui" />
+            android:gravity="center_horizontal"
+            android:text="Já tem uma conta? Entre aqui" />
 
 
     </LinearLayout>

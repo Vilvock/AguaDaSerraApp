@@ -6,11 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.aguadaserra.app.R
+import com.aguadaserra.app.global_ui.config_fragment.BaseFragment
 
 /**
  * A simple [Fragment] subclass.
  */
-class HomeFragment : Fragment() {
+class HomeFragment : BaseFragment() {
+
+    override var toolbarVisibility: Boolean = false
+    override var bottomNavigationVisibility: Boolean = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

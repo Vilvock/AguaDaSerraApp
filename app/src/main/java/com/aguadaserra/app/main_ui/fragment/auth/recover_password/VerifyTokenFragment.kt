@@ -22,7 +22,10 @@ import com.aguadaserra.app.global_ui.config_fragment.BaseFragment
 import com.aguadaserra.app.global_ui.dialog.GenericDialogFragment
 import com.aguadaserra.app.main_ui.fragment.auth.recover_password.RecoverPasswordViewModel
 import com.aguadaserra.app.util.KeyboardUtils
+import kotlinx.android.synthetic.main.fragment_recover_password.*
 import kotlinx.android.synthetic.main.fragment_verify_token.*
+import kotlinx.android.synthetic.main.fragment_verify_token.next_bt
+import kotlinx.android.synthetic.main.fragment_verify_token.signUp_tv
 import java.util.regex.Pattern
 
 /**
@@ -30,8 +33,9 @@ import java.util.regex.Pattern
  */
 class VerifyTokenFragment : BaseFragment() {
 
-
     private val viewModel: RecoverPasswordViewModel by viewModels()
+
+    override var hasBackButton: Boolean = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,8 +48,10 @@ class VerifyTokenFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        useful.createLink(signIn_tv,
-            "Realize seu login! Entre aqui",
+        //pegar lib de code phone
+
+        useful.createLink(signUp_tv,
+            "Já tem uma conta? Entre aqui",
             "Entre aqui", object : ClickableSpan() {
                 override fun onClick(widget: View) {
                     // your action
@@ -58,11 +64,13 @@ class VerifyTokenFragment : BaseFragment() {
                     // this is where you set link color, underline, typeface etc.
                     val linkColor = ContextCompat.getColor(requireActivity(), R.color.colorPrimary)
                     ds.color = linkColor
-                    ds.isUnderlineText = false
+                    ds.isUnderlineText = true
                 }
             })
 
-        next_bt.setOnClickListener (::verifyTokenPressed)
+        next_bt.setOnClickListener {
+            navigation.navigate(R.id.action_verifyTokenFragment_to_updatePasswordByTokenFragment)
+        }
 
         viewModel.viewState.observe(viewLifecycleOwner, Observer {
 
@@ -72,7 +80,6 @@ class VerifyTokenFragment : BaseFragment() {
 
         viewModel.recoverResponseLiveData.observe(viewLifecycleOwner, ::onRecoverResponse)
 
-        configEditTest()
     }
 
     override fun onStart() {
@@ -120,55 +127,5 @@ class VerifyTokenFragment : BaseFragment() {
         KeyboardUtils.hideKeyboard(requireActivity())
         viewModel.verifyTokenPassword(
             tokenPass = token_et.text.toString())
-    }
-    fun configEditTest(){
-        val email = token_et
-        token_et.setOnFocusChangeListener(object : View.OnFocusChangeListener {
-            override fun onFocusChange(v: View?, hasfoucs: Boolean) {
-                if (!hasfoucs) {
-                    KeyboardUtils.hideKeyboard(requireActivity())
-                }
-            }
-        })
-
-
-
-
-        token_et.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-//                tokenChecked_iv.setImageResource(R.drawable.ic_checked_false)
-            }
-
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-//                tokenChecked_iv.setImageResource(R.drawable.ic_checked_false)
-            }
-
-            override fun afterTextChanged(p0: Editable?) {
-                if (isEmailValid(email)) {
-//                    tokenChecked_iv.setImageResource(R.drawable.ic_checked)
-//                    Toast.makeText(requireContext(), "Email Valido!", Toast.LENGTH_SHORT).show()
-                } else {
-//                    Toast.makeText(
-//                        activity,
-//                        "Informe um endereço de e-mail válidos",
-//                        Toast.LENGTH_SHORT
-//                    ).show()
-//                    tokenChecked_iv.setImageResource(R.drawable.ic_checked_false)
-                }
-            }
-
-        })
-    }
-    fun isEmailValid(email: EditText): Boolean {
-        return try {
-            val pattern =
-                Pattern.compile("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
-            val matcher = pattern.matcher(email.getText())
-            matcher.matches()
-        } catch (e: Exception) {
-            e.printStackTrace()
-            false
-        }
-
     }
 }

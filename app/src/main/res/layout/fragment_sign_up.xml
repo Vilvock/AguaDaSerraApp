@@ -96,7 +96,7 @@
 
 
             <com.aguadaserra.app.global_ui.components.ProgressButton
-                android:id="@+id/login_bt"
+                android:id="@+id/register_bt"
                 style="@style/StyleProgressButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -121,7 +121,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="0"
-                    android:text="ou entre com" />
+                    android:text="ou crie uma conta com" />
 
 
                 <View style="@style/Divider.Horizontal"
@@ -199,7 +199,7 @@
             android:layout_weight="0"
             android:layout_margin="36dp"
             android:gravity="center_horizontal"
-            android:text="Ainda não possui uma conta? Entre aqui" />
+            android:text="Já possui uma conta? Entre aqui" />
 
 
     </LinearLayout>

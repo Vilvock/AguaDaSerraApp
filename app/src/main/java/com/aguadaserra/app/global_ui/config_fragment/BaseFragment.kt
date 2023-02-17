@@ -30,7 +30,7 @@ abstract class BaseFragment : Fragment() {
 
     open var hasBackButton = false
 
-    open var toolbarVisibility = false
+    open var toolbarVisibility = true
 
     open var bottomNavigationVisibility = false
 

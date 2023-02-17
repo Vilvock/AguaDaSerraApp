@@ -69,15 +69,67 @@
     </fragment>
 
     <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.aguadaserra.app.main_ui.fragment.auth.login.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_recoverPasswordFragment"
+            app:destination="@id/recoverPasswordFragment"
+            app:popUpTo="@id/signInFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"  />
+    </fragment>
+    <fragment
+        android:id="@+id/recoverPasswordFragment"
+        android:name="com.aguadaserra.app.main_ui.fragment.auth.recover_password.RecoverPasswordFragment"
+        android:label="fragment_recover_password"
+        tools:layout="@layout/fragment_recover_password" >
+        <action
+            android:id="@+id/action_recoverPasswordFragment_to_verifyTokenFragment"
+            app:destination="@id/verifyTokenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyTokenFragment"
+        android:name="com.aguadaserra.app.main_ui.fragment.auth.recover_password.VerifyTokenFragment"
+        android:label="fragment_verify_token"
+        tools:layout="@layout/fragment_verify_token" >
+        <action
+            android:id="@+id/action_verifyTokenFragment_to_updatePasswordByTokenFragment"
+            app:destination="@id/updatePasswordByTokenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/updatePasswordByTokenFragment"
+        android:name="com.aguadaserra.app.main_ui.fragment.auth.recover_password.UpdatePasswordByTokenFragment"
+        android:label="fragment_update_password_by_token"
+        tools:layout="@layout/fragment_update_password_by_token" />
+    <action
+        android:id="@+id/action_global_updatePasswordByTokenFragment"
+        app:launchSingleTop="true" />
+
+
+    <fragment
         android:id="@+id/multipleIntroContainerFragment"
         android:name="com.aguadaserra.app.main_ui.fragment.intro.MultipleIntroContainerFragment"
         android:label="fragment_multiple_intro_container"
         tools:layout="@layout/fragment_multiple_intro_container" />
-    <fragment
-        android:id="@+id/signInFragment"
-        android:name="com.aguadaserra.app.main_ui.fragment.auth.login.SignInFragment"
-        android:label="fragment_sign_in"
-        tools:layout="@layout/fragment_sign_in" />
     <fragment
         android:id="@+id/cartFragment"
         android:name="com.aguadaserra.app.main_ui.fragment.menu.cart.CartFragment"
@@ -98,5 +150,10 @@
         android:name="com.aguadaserra.app.main_ui.fragment.menu.profile.MainMenuFragment"
         android:label="fragment_main_menu"
         tools:layout="@layout/fragment_main_menu" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.aguadaserra.app.main_ui.fragment.auth.register.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
 
 </navigation>

@@ -14,6 +14,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.findNavController
 import com.aguadaserra.app.R
 import com.aguadaserra.app.controller.webservice.config.ServiceResponse
 import com.aguadaserra.app.global_model.User
@@ -30,8 +31,7 @@ class SignInFragment : BaseFragment() {
 
     private val viewModel: SignInViewModel by viewModels()
 
-    override var toolbarVisibility: Boolean = true
-    override var hasBackButton: Boolean = false
+    override var hasBackButton: Boolean = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,8 +48,7 @@ class SignInFragment : BaseFragment() {
             "Ainda não possui uma conta? Entre aqui",
             "Entre aqui", object : ClickableSpan() {
                 override fun onClick(widget: View) {
-                    // your action
-                    navigation.popBackStack()
+                    navigation.navigate(R.id.action_signInFragment_to_signUpFragment)
                 }
 
                 override fun updateDrawState(ds: TextPaint) {
@@ -57,7 +56,7 @@ class SignInFragment : BaseFragment() {
                     // this is where you set link color, underline, typeface etc.
                     val linkColor = ContextCompat.getColor(requireActivity(), R.color.colorPrimary)
                     ds.color = linkColor
-                    ds.isUnderlineText = false
+                    ds.isUnderlineText = true
                 }
             })
 
@@ -74,12 +73,18 @@ class SignInFragment : BaseFragment() {
                     // this is where you set link color, underline, typeface etc.
                     val linkColor = ContextCompat.getColor(requireActivity(), R.color.colorPrimary)
                     ds.color = linkColor
-                    ds.isUnderlineText = false
+                    ds.isUnderlineText = true
                 }
             })
 
         login_bt.setOnClickListener {
-            loginPressed(it)
+
+            navigation = requireActivity().findNavController(R.id.nav_host_fragment)
+
+            val graph = navigation.navInflater.inflate(R.navigation.main_graph)
+            graph.startDestination = R.id.homeFragment
+            navigation.graph = graph
+//            loginPressed(it)
         }
 
         viewModel.viewState.observe(viewLifecycleOwner, Observer {
@@ -87,8 +92,6 @@ class SignInFragment : BaseFragment() {
         })
 
         viewModel.loginResponseLiveData.observe(viewLifecycleOwner, ::onLoginResponse)
-
-        configEditText()
     }
 
     override fun onStart() {
@@ -142,46 +145,5 @@ class SignInFragment : BaseFragment() {
             password = password_et.text.toString())
     }
 
-    private fun configEditText(){
 
-        val email = email_et
-
-        email_et.onFocusChangeListener = View.OnFocusChangeListener { v, hasfoucs ->
-            if (!hasfoucs) {
-                KeyboardUtils.hideKeyboard(requireActivity())
-            }
-        }
-
-        email.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-//                emailChecked_iv.setImageResource(R.drawable.ic_checked_false)
-            }
-
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-//                emailChecked_iv.setImageResource(R.drawable.ic_checked_false)
-            }
-
-            override fun afterTextChanged(p0: Editable?) {
-                if (isEmailValidEditTextType(email)) {
-//                    emailChecked_iv.setImageResource(R.drawable.ic_checked)
-                   // Toast.makeText(requireContext(), "Email Valido!", Toast.LENGTH_SHORT).show()
-                } else {
-//                    emailChecked_iv.setImageResource(R.drawable.ic_checked_false)
-                }
-            }
-
-        })
-    }
-    fun isEmailValidEditTextType(email: EditText): Boolean {
-        return try {
-            val pattern =
-                Pattern.compile("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
-            val matcher = pattern.matcher(email.text)
-            matcher.matches()
-        } catch (e: Exception) {
-            e.printStackTrace()
-            false
-        }
-
-    }
 }

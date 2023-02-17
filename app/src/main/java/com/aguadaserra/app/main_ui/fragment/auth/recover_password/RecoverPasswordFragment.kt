@@ -28,8 +28,9 @@ import java.util.regex.Pattern
  */
 class RecoverPasswordFragment : BaseFragment() {
 
-
     private val viewModel: RecoverPasswordViewModel by viewModels()
+
+    override var hasBackButton: Boolean = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,7 +43,7 @@ class RecoverPasswordFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        useful.createLink(signIn_tv,
+        useful.createLink(signUp_tv,
             "Já tem uma conta? Entre aqui",
             "Entre aqui", object : ClickableSpan() {
                 override fun onClick(widget: View) {
@@ -56,21 +57,22 @@ class RecoverPasswordFragment : BaseFragment() {
                     // this is where you set link color, underline, typeface etc.
                     val linkColor = ContextCompat.getColor(requireActivity(), R.color.colorPrimary)
                     ds.color = linkColor
-                    ds.isUnderlineText = false
+                    ds.isUnderlineText = true
                 }
             })
 
-        recoverPass_bt.setOnClickListener (::sendEmailPressed)
+        next_bt.setOnClickListener {
+            navigation.navigate(R.id.action_recoverPasswordFragment_to_verifyTokenFragment)
+        }
 
         viewModel.viewState.observe(viewLifecycleOwner, Observer {
 
-            recoverPass_bt.isProgressVisible = it.isLoading
+            next_bt.isProgressVisible = it.isLoading
 
         })
 
         viewModel.recoverResponseLiveData.observe(viewLifecycleOwner, ::onRecoverResponse)
 
-        configEditTest()
     }
 
     override fun onStart() {
@@ -115,53 +117,5 @@ class RecoverPasswordFragment : BaseFragment() {
         KeyboardUtils.hideKeyboard(requireActivity())
         viewModel.recoverPassword(
             email = email_et.text.toString())
-    }
-    fun configEditTest(){
-
-        val email = email_et
-
-        email_et.setOnFocusChangeListener(object : View.OnFocusChangeListener {
-            override fun onFocusChange(v: View?, hasfoucs: Boolean) {
-                if (!hasfoucs) {
-                    KeyboardUtils.hideKeyboard(requireActivity())
-                }
-            }
-        })
-
-
-
-
-        email.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-//                emailChecked_iv.setImageResource(R.drawable.ic_checked_false)
-            }
-
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-//                emailChecked_iv.setImageResource(R.drawable.ic_checked_false)
-            }
-
-            override fun afterTextChanged(p0: Editable?) {
-                if (isEmailValid(email) && email_et.text.toString() != "") {
-//                    emailChecked_iv.setImageResource(R.drawable.ic_checked)
-
-                } else {
-
-//                    emailChecked_iv.setImageResource(R.drawable.ic_checked_false)
-                }
-            }
-
-        })
-    }
-    fun isEmailValid(email: EditText): Boolean {
-        return try {
-            val pattern =
-                Pattern.compile("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
-            val matcher = pattern.matcher(email.getText())
-            matcher.matches()
-        } catch (e: Exception) {
-            e.printStackTrace()
-            false
-        }
-
     }
 }

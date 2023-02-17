@@ -1,10 +1,13 @@
 package com.aguadaserra.app.main_ui.fragment.auth.recover_password
 
 import android.os.Bundle
+import android.text.TextPaint
+import android.text.style.ClickableSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
@@ -22,6 +25,8 @@ class UpdatePasswordByTokenFragment : BaseFragment() {
 
     private val viewModel: RecoverPasswordViewModel by viewModels()
 
+    override var hasBackButton: Boolean = true
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,11 +38,32 @@ class UpdatePasswordByTokenFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        update_bt.setOnClickListener(::updatePasswordPressed)
+        next_bt.setOnClickListener {
+            navigation.navigateUp()
+        }
+
+
+        useful.createLink(signUp_tv,
+            "Já tem uma conta? Entre aqui",
+            "Entre aqui", object : ClickableSpan() {
+                override fun onClick(widget: View) {
+                    // your action
+
+                    navigation.navigateUp()
+                }
+
+                override fun updateDrawState(ds: TextPaint) {
+                    super.updateDrawState(ds)
+                    // this is where you set link color, underline, typeface etc.
+                    val linkColor = ContextCompat.getColor(requireActivity(), R.color.colorPrimary)
+                    ds.color = linkColor
+                    ds.isUnderlineText = true
+                }
+            })
 
         viewModel.viewState.observe(viewLifecycleOwner, Observer {
 
-            update_bt.isProgressVisible = it.isLoading
+            next_bt.isProgressVisible = it.isLoading
 
         })
 
