@@ -111,15 +111,17 @@ class SplashFragment : BaseFragment() {
 
                         if (preferences.getInt(
                                 ENTERING_FIRST_TIME, 1) == 0) {
-                                navigation.navigate(R.id.action_splashFragment_to_authContainerFragment)
-                        } else if (preferences.getInt(
-                            ENTERING_FIRST_TIME, 1) == 2) {
 
-                            navigation.navigate(R.id.action_splashFragment_to_authContainerFragment)
-                            preferences.storeInt(Preferences.ENTERING_FIRST_TIME, 1)
+                                navigation.navigate(R.id.action_splashFragment_to_authContainerFragment)
+
+                        } else if (preferences.getInt(
+                                ENTERING_FIRST_TIME, 1) == 2) {
+
+                                navigation.navigate(R.id.action_splashFragment_to_authContainerFragment)
+                                preferences.storeInt(ENTERING_FIRST_TIME, 1)
                         } else {
 
-                            navigation.navigate(R.id.action_splashFragment_to_multipleIntroContainerFragment)
+                                navigation.navigate(R.id.action_splashFragment_to_multipleIntroContainerFragment)
                         }
 
                     }

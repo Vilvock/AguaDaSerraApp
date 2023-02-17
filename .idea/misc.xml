@@ -4,15 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/bg_top_round.xml" value="0.303" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/ic_arrow_back.xml" value="0.303" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/main_solid_background.xml" value="0.303" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/selector_bottom_nav.xml" value="0.303" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/sh_selected.xml" value="0.1935" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/sh_unselected.xml" value="0.303" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/shape_default_gradient_bt.xml" value="0.303" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/shape_default_radius.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_generic_dialog.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_getting_location_permission.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_intro_type1.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_multiple_intro_container.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_recover_password.xml" value="0.3625" />
-        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_sign_in.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_sign_in.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_sign_up.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_splash.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_update_password_by_token.xml" value="0.3625" />

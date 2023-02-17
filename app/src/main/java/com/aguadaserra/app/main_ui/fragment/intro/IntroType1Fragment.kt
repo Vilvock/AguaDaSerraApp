@@ -7,8 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.aguadaserra.app.MainActivity
+import com.aguadaserra.app.main_ui.activity.MainActivity
 import com.aguadaserra.app.R
 import com.aguadaserra.app.util.Preferences
 import kotlinx.android.synthetic.main.fragment_intro_type1.*
@@ -68,18 +67,18 @@ class IntroType1Fragment(private val title: String, private val subTitle: String
 //        default_iv.setImageDrawable(drawable)
 //        rootView.setBackgroundColor(color)
 
-        ok_bt.setOnClickListener {
-            if (checkBox.isChecked) {
-
-                preferences.storeInt(Preferences.ENTERING_FIRST_TIME, 0)
-            } else {
-
-                preferences.storeInt(Preferences.ENTERING_FIRST_TIME, 2)
-            }
-
-            startActivity(Intent(requireActivity(), MainActivity::class.java))
-            requireActivity().finishAffinity()
-        }
+//        ok_bt.setOnClickListener {
+//            if (checkBox.isChecked) {
+//
+//                preferences.storeInt(Preferences.ENTERING_FIRST_TIME, 0)
+//            } else {
+//
+//                preferences.storeInt(Preferences.ENTERING_FIRST_TIME, 2)
+//            }
+//
+//            startActivity(Intent(requireActivity(), MainActivity::class.java))
+//            requireActivity().finishAffinity()
+//        }
     }
 
 }

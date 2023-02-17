@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:fillViewport="true"
     tools:context=".main_ui.fragment.auth.login.SignInFragment">
 
@@ -12,7 +12,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="start"
         android:orientation="vertical">
 
 
@@ -29,7 +28,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
                 android:gravity="start"
-                android:text="Realize seu login"
+                android:text="Olá, \nRealize seu login"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size7"
                 android:textStyle="bold" />
@@ -47,69 +46,49 @@
             android:paddingEnd="20dp"
             android:paddingBottom="20dp">
 
-            <LinearLayout
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:orientation="vertical">
+                android:layout_weight="0"
+                android:textColorHint="@color/grayApplication">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="E-mail" />
-
-                <LinearLayout
+                <EditText
+                    android:id="@+id/email_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:orientation="horizontal">
+                    android:hint="E-mail"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-                    <EditText
-                        android:id="@+id/email_et"
-                        style="@style/mainEditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:inputType="textEmailAddress" />
-
-                    <ImageView
-                        android:id="@+id/emailChecked_iv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginEnd="12dp"
-                        android:layout_weight="0"/>
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Senha" />
-
+                android:layout_weight="0"
+                android:textColorHint="@color/grayApplication"
+                app:passwordToggleEnabled="true">
 
                 <EditText
                     android:id="@+id/password_et"
-                    style="@style/mainEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="textPassword" />
+                    android:hint="Senha"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-
-            </LinearLayout>
+            <TextView
+                android:id="@+id/forgetPass_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="end"
+                android:text="Esqueceu sua senha?" />
 
 
             <com.aguadaserra.app.global_ui.components.ProgressButton
@@ -118,24 +97,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="Login"/>
+                android:text="Login" />
 
-            <TextView
-                android:id="@+id/forgetPass_tv"
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_marginTop="4dp"
-                android:gravity="center_horizontal"
-                android:text="Esqueceu sua senha? Recupere aqui" />
+                android:layout_height="match_parent"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:layout_weight="0"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="36dp"
-                android:text="ou entre com"
-                android:textStyle="bold"
-                android:visibility="gone" />
+                <View style="@style/Divider.Horizontal"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="0"
+                    android:text="ou entre com" />
+
+
+                <View style="@style/Divider.Horizontal"
+                    android:layout_weight="1"/>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -174,7 +161,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="12dp"
-                    android:layout_weight="0"/>
+                    android:layout_weight="0" />
 
                 <TextView
                     android:layout_width="wrap_content"

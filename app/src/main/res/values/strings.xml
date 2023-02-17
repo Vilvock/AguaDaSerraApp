@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AguaDaSerraApp</string>
+    <string name="app_name">Agua da Serra</string>
     <string name="app_package">com.aguadaserra.app</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.aguadaserra.app.R
 import com.aguadaserra.app.controller.webservice.config.ServiceResponse
@@ -16,6 +17,7 @@ import com.aguadaserra.app.global_ui.dialog.CustomDialogMessages
 import com.aguadaserra.app.util.Animation
 import com.aguadaserra.app.util.Preferences
 import com.aguadaserra.app.util.Useful
+import com.aguadaserra.app.util.validation.Validation
 
 /**
  * A simple [Fragment] subclass.
@@ -24,28 +26,22 @@ abstract class BaseFragment : Fragment() {
 
     open var title: String = ""
 
-    open var toolbarStyle = ToolbarTint.WHITE
-
     open var systemBarColor: SystemBarColor = SystemBarColor.DARK
 
     open var hasBackButton = false
-
-    open var toolbarHasShadow = true
 
     open var toolbarVisibility = false
 
     open var bottomNavigationVisibility = false
 
-    open var filterVisibility = false
-
     //pega o padrao
-//    open var navController: Int = R.id.nav_host_fragment
+    open var navController: Int = R.id.nav_host_fragment
 
     lateinit var customDialogMessages: CustomDialogMessages
     lateinit var singleToast: SingleToast
     lateinit var preferences: Preferences
     lateinit var navigation: NavController
-//    lateinit var validation: Validation
+    lateinit var validation: Validation
     lateinit var useful: Useful
     lateinit var animation: Animation
 
@@ -57,16 +53,15 @@ abstract class BaseFragment : Fragment() {
         preferences = Preferences(requireContext())
         customDialogMessages = CustomDialogMessages(requireContext())
         singleToast = SingleToast.INSTANCE
-//        validation = Validation(requireContext())
+        validation = Validation(requireContext())
         animation = Animation(requireContext())
 
-//        navigation = requireActivity().findNavController(navController)
+        navigation = requireActivity().findNavController(navController)
     }
 
     fun refreshFragmentStyle() {
         if (toolbarVisibility) {
             updateTitle(title)
-            updateToolbarTint(toolbarStyle)
             updateHasBackButton(hasBackButton)
             updateSystemBarColor(systemBarColor)
         } else {
@@ -89,7 +84,7 @@ abstract class BaseFragment : Fragment() {
 
     fun updateHasBackButton(hasBackButton: Boolean) {
         this.hasBackButton = hasBackButton
-        (requireActivity() as? BaseActivity)?.updateToolbar(toolbarStyle, hasBackButton, toolbarHasShadow)
+        (requireActivity() as? BaseActivity)?.updateToolbar(hasBackButton)
     }
 
     fun updateTitle(title: String) {
@@ -100,11 +95,6 @@ abstract class BaseFragment : Fragment() {
     fun updateSystemBarColor(color: SystemBarColor) {
         this.systemBarColor = color
         (requireActivity() as? BaseActivity)?.updateSystemBarColor(color)
-    }
-
-    fun updateToolbarTint(tint: ToolbarTint) {
-        this.toolbarStyle = tint
-        (requireActivity() as? BaseActivity)?.updateToolbar(tint, hasBackButton, toolbarHasShadow)
     }
 
 //    fun getMainParentFragment(): Fragment? {

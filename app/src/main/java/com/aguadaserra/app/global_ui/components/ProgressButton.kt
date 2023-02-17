@@ -23,7 +23,7 @@ import me.zhanghai.android.materialprogressbar.MaterialProgressBar
 
 class ProgressButton : FrameLayout {
 
-    private val BUTTON_HEIGHT_DP = 60
+    private val BUTTON_HEIGHT_DP = 40
 
     private val validAttributeSet = intArrayOf(
         android.R.attr.background, // idx 0
@@ -86,7 +86,7 @@ class ProgressButton : FrameLayout {
         attr_background = ta.getDrawable(0)
         attr_buttonText = ta.getString(1)
 
-        setBackgroundColor(Color.TRANSPARENT)
+//        setBackgroundColor(Color.TRANSPARENT)
 
         //para deixar bold
 //        val builder = SpannableStringBuilder(attr_buttonText)
@@ -99,7 +99,7 @@ class ProgressButton : FrameLayout {
         button.layoutParams =
             LayoutParams(MATCH_PARENT, dpToPx(BUTTON_HEIGHT_DP).toInt(), NO_GRAVITY)
 
-        button.typeface = ResourcesCompat.getFont(context, R.font.inter_bold)
+        button.typeface = ResourcesCompat.getFont(context, R.font.inter_light)
         button.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize.toFloat())
 
         button.isAllCaps = false

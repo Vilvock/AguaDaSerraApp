@@ -13,5 +13,5 @@ interface BaseActivity {
     fun updatebottomNavigationVisibility(hasBottomNavigation: Boolean)
     fun updateToolbarVisibility(hasToolbar: Boolean)
     fun updateToolbarTitle(title: String)
-    fun updateToolbar(tint: ToolbarTint, hasBackButton: Boolean, hasShadow: Boolean)
+    fun updateToolbar(hasBackButton: Boolean)
 }

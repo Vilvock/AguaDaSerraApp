@@ -12,7 +12,7 @@
         android:icon="@drawable/ic_cart"/>
 
     <item
-        android:id="@+id/navigation_order"
+        android:id="@+id/navigation_orders"
         android:title="@string/orders"
         android:icon="@drawable/ic_orders"/>
 

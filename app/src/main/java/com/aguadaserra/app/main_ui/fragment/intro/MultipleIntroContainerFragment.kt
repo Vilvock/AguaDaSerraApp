@@ -1,18 +1,23 @@
 package com.aguadaserra.app.main_ui.fragment.intro
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.aguadaserra.app.R
+import com.aguadaserra.app.global_ui.config_fragment.BaseFragment
+import com.aguadaserra.app.main_ui.activity.MainActivity
 import com.aguadaserra.app.main_ui.adapter.ViewPagerFragmentAdapter
+import com.aguadaserra.app.util.Preferences
+import kotlinx.android.synthetic.main.fragment_intro_type1.*
 import kotlinx.android.synthetic.main.fragment_multiple_intro_container.*
 
 /**
  * A simple [Fragment] subclass.
  */
-class MultipleIntroContainerFragment : Fragment() {
+class MultipleIntroContainerFragment : BaseFragment() {
 
 
     private val fragmentList = ArrayList<Fragment>()
@@ -28,6 +33,20 @@ class MultipleIntroContainerFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        begin_bt.setOnClickListener {
+
+//            if (checkBox.isChecked) {
+//
+                preferences.storeInt(Preferences.ENTERING_FIRST_TIME, 0)
+//            } else {
+//
+//                preferences.storeInt(Preferences.ENTERING_FIRST_TIME, 2)
+//            }
+
+            startActivity(Intent(requireActivity(), MainActivity::class.java))
+            requireActivity().finishAffinity()
+        }
 
         fragmentList.add(
             IntroType1Fragment("Seja Bem-vindo!", "Nas próximas telas apresentaremos\n" +
