@@ -32,8 +32,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:gravity="center_horizontal"
-        android:padding="12dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/padding_application">
 
         <Button
             android:id="@+id/begin_bt"
@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="Já tem uma conta? Entre aqui" />
+            android:text="Já possui uma conta? Entre aqui" />
     </LinearLayout>
 
 

@@ -2,10 +2,13 @@ package com.aguadaserra.app.main_ui.fragment.intro
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.TextPaint
+import android.text.style.ClickableSpan
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import com.aguadaserra.app.R
 import com.aguadaserra.app.global_ui.config_fragment.BaseFragment
 import com.aguadaserra.app.main_ui.activity.MainActivity
@@ -13,6 +16,7 @@ import com.aguadaserra.app.main_ui.adapter.ViewPagerFragmentAdapter
 import com.aguadaserra.app.util.Preferences
 import kotlinx.android.synthetic.main.fragment_intro_type1.*
 import kotlinx.android.synthetic.main.fragment_multiple_intro_container.*
+import kotlinx.android.synthetic.main.fragment_sign_in.*
 
 /**
  * A simple [Fragment] subclass.
@@ -22,6 +26,8 @@ class MultipleIntroContainerFragment : BaseFragment() {
 
     private val fragmentList = ArrayList<Fragment>()
     private var viewPagerFragmentAdapter: ViewPagerFragmentAdapter? = null
+
+    override var toolbarVisibility: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +39,22 @@ class MultipleIntroContainerFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        useful.createLink(signUp_tv,
+            "Já possui uma conta? Entre aqui",
+            "Entre aqui", object : ClickableSpan() {
+                override fun onClick(widget: View) {
+                    navigation.navigate(R.id.action_signInFragment_to_signUpFragment)
+                }
+
+                override fun updateDrawState(ds: TextPaint) {
+                    super.updateDrawState(ds)
+                    // this is where you set link color, underline, typeface etc.
+                    val linkColor = ContextCompat.getColor(requireActivity(), R.color.colorPrimary)
+                    ds.color = linkColor
+                    ds.isUnderlineText = true
+                }
+            })
 
         begin_bt.setOnClickListener {
 

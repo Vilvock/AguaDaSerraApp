@@ -29,6 +29,8 @@ class SplashFragment : BaseFragment() {
     private var runnable = Runnable { configInit() }
     private val DELAY = 3000L
 
+    override var toolbarVisibility: Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

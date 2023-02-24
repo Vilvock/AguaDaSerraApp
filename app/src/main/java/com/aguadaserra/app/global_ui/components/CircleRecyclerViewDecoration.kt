@@ -1,5 +1,6 @@
 package com.aguadaserra.app.global_ui.components
 
+import android.content.Context
 import android.content.res.Resources
 import android.graphics.Canvas
 import android.graphics.Color
@@ -9,11 +10,12 @@ import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.aguadaserra.app.R
 
-class CircleRecyclerViewDecoration: RecyclerView.ItemDecoration() {
+class CircleRecyclerViewDecoration(private val context: Context): RecyclerView.ItemDecoration() {
 
-    private val colorActive = Color.parseColor("#E2B378")
-    private val colorInactive = Color.parseColor("#F5F5F5")
+    private val colorActive = context.resources.getColor(R.color.colorPrimaryDark)
+    private val colorInactive = context.resources.getColor(R.color.grayApplication)
 
     /**
      * Height of the space the indicator takes up at the bottom of the view.

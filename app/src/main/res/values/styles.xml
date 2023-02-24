@@ -7,6 +7,7 @@
         <item name="android:textSize">@dimen/text_size5</item>
         <item name="android:textStyle">normal</item>
         <item name="rippleColor">@color/white</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="StyleButtonMedium" parent="Widget.MaterialComponents.Button">
@@ -16,6 +17,7 @@
         <item name="android:textSize">@dimen/text_size6</item>
         <item name="android:textStyle">bold</item>
         <item name="rippleColor">@color/white</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="StyleButtonStrokes" parent="Widget.MaterialComponents.Button">
@@ -38,6 +40,7 @@
         <item name="rippleColor">@color/white</item>
         <item name="pb_textSize">@dimen/text_size7</item>
         <item name="pb_loaderTint">@color/white</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="mainEditText">
