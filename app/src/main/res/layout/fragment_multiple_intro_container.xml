@@ -38,8 +38,6 @@
         <Button
             android:id="@+id/begin_bt"
             style="@style/StyleButtonSmall"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="Começar" />
 
         <TextView

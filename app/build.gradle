@@ -91,4 +91,7 @@ dependencies {
     //load circle
     implementation 'me.relex:circleindicator:2.1.4'
     implementation 'me.relex:circleindicator:2.1.4@aar'
+
+    //mask
+    implementation 'com.github.santalu:mask-edittext:1.1.1'
 }
