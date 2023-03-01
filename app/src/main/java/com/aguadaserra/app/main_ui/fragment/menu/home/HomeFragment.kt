@@ -12,8 +12,9 @@ import com.aguadaserra.app.global_model.Photo
 import com.aguadaserra.app.global_ui.components.CircleRecyclerViewDecoration
 import com.aguadaserra.app.global_ui.config_fragment.BaseFragment
 import com.aguadaserra.app.main_ui.adapter.CarrouselItemAdapter
+import com.aguadaserra.app.main_ui.adapter.ProductAdapter
+import com.aguadaserra.app.util.RecyclerItemListener
 import kotlinx.android.synthetic.main.fragment_home.*
-import java.util.ArrayList
 
 /**
  * A simple [Fragment] subclass.
@@ -36,6 +37,19 @@ class HomeFragment : BaseFragment() {
 
         loadCarrousel()
 
+        val list = ArrayList<Any>()
+
+        list.add(Any())
+        list.add(Any())
+        list.add(Any())
+        list.add(Any())
+        list.add(Any())
+
+        val adapter = ProductAdapter(requireActivity(), list, object : RecyclerItemListener {})
+        val layoutManagerRv: RecyclerView.LayoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+
+        products_rv.layoutManager = layoutManagerRv
+        products_rv.adapter = adapter
     }
 
 

@@ -18,6 +18,7 @@
             android:id="@+id/banner_iv"
             android:layout_width="match_parent"
             android:layout_height="166dp"
+            android:background="@color/grayApplication"
             android:scaleType="centerCrop"/>
 
     </androidx.cardview.widget.CardView>

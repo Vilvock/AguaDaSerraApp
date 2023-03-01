@@ -28,7 +28,7 @@ class MainMenuFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         userData_ib.setOnClickListener {
-            navigation.navigate(R.id.action_mainMenuFragment_to_userAddressFragment)
+            navigation.navigate(R.id.action_mainMenuFragment_to_userDataFragment)
         }
 
     }

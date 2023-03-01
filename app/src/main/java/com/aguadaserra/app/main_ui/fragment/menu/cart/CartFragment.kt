@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.aguadaserra.app.R
 import com.aguadaserra.app.global_ui.config_fragment.BaseFragment
+import kotlinx.android.synthetic.main.fragment_cart.*
+import kotlinx.android.synthetic.main.fragment_main_menu.*
 
 /**
  * A simple [Fragment] subclass.
@@ -21,6 +23,14 @@ class CartFragment : BaseFragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_cart, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        payment_bt.setOnClickListener {
+            navigation.navigate(R.id.action_cartFragment_to_methodPaymentFragment)
+        }
     }
 
 }

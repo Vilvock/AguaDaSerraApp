@@ -53,7 +53,15 @@
         android:id="@+id/homeFragment"
         android:name="com.aguadaserra.app.main_ui.fragment.menu.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/gettingLocationPermissionFragment"
         android:name="com.aguadaserra.app.main_ui.fragment.intro.GettingLocationPermissionFragment"
@@ -134,7 +142,15 @@
         android:id="@+id/cartFragment"
         android:name="com.aguadaserra.app.main_ui.fragment.menu.cart.CartFragment"
         android:label="fragment_cart"
-        tools:layout="@layout/fragment_cart" />
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_methodPaymentFragment"
+            app:destination="@id/methodPaymentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/ordersFragment"
         android:name="com.aguadaserra.app.main_ui.fragment.menu.orders.OrdersFragment"
@@ -164,6 +180,13 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_userDataFragment"
+            app:destination="@id/userDataFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -180,5 +203,28 @@
         android:name="com.aguadaserra.app.main_ui.fragment.menu.profile.CategoriesFragment"
         android:label="fragment_categories"
         tools:layout="@layout/fragment_categories" />
+    <fragment
+        android:id="@+id/methodPaymentFragment"
+        android:name="com.aguadaserra.app.main_ui.fragment.menu.cart.MethodPaymentFragment"
+        android:label="fragment_method_payment"
+        tools:layout="@layout/fragment_method_payment" >
+        <action
+            android:id="@+id/action_methodPaymentFragment_to_userAddressFragment2"
+            app:destination="@id/userAddressFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.aguadaserra.app.main_ui.fragment.menu.home.ProductDetailFragment"
+        android:label="fragment_product_detail"
+        tools:layout="@layout/fragment_product_detail" />
+    <fragment
+        android:id="@+id/userDataFragment"
+        android:name="com.aguadaserra.app.main_ui.fragment.menu.profile.UserDataFragment"
+        android:label="UserDataFragment"
+        tools:layout="@layout/fragment_user_data"  />
 
 </navigation>

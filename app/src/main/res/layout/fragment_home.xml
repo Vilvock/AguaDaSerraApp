@@ -47,22 +47,32 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
-                        android:text="lorem_ipsum"
+                        android:text="Ver mais"
                         android:textColor="@color/colorPrimaryDark"/>
 
                 </LinearLayout>
 
 
-
-                <include layout="@layout/empty_list"/>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/services_rv"
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="64dp"
-                    android:overScrollMode="never"
-                    android:nestedScrollingEnabled="true"/>
+                    android:layout_height="match_parent">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/products_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="64dp"
+                        android:overScrollMode="never"
+                        android:nestedScrollingEnabled="true"/>
+
+                    <include layout="@layout/loading"/>
+
+                    <include layout="@layout/empty_list"/>
+
+                </FrameLayout>
+
+
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
