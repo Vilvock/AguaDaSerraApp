@@ -77,14 +77,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="6dp"
-                            android:text="lorem_ipsum"
+                            android:text="xx Avaliações"
                             android:ellipsize="end"
                             android:textSize="@dimen/text_size3"/>
 
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/valueTv"
+                        android:id="@+id/value_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"

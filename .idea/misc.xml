@@ -24,6 +24,8 @@
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_carrousel_item.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_carrousel_product_item.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_favorite.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_order.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_product.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_product_grid.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_user_address.xml" value="0.3625" />

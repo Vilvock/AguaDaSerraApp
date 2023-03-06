@@ -55,8 +55,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="0"
-                            android:text="Subtotal"
-                            android:textSize="@dimen/text_size5" />
+                            android:text="Subtotal" />
 
                         <TextView
                             android:id="@+id/subtotalTv"
@@ -65,8 +64,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_weight="1"
                             android:gravity="end"
-                            android:text="--,--"
-                            android:textSize="@dimen/text_size5" />
+                            android:text="--,--" />
                     </LinearLayout>
 
 
@@ -81,7 +79,6 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="0"
                             android:text="Total"
-                            android:textSize="@dimen/text_size5"
                             android:textStyle="bold" />
 
                         <TextView
@@ -92,7 +89,6 @@
                             android:layout_weight="1"
                             android:gravity="end"
                             android:text="--,--"
-                            android:textSize="@dimen/text_size6"
                             android:textStyle="bold" />
                     </LinearLayout>
 

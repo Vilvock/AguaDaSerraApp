@@ -1,14 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".main_ui.fragment.menu.cart.shop.SuccessFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:orientation="vertical"
+                    android:paddingBottom="100dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_application">
+
+
+                        <ImageView
+                            android:id="@+id/list_iv"
+                            android:layout_width="match_parent"
+                            android:layout_height="96dp"
+                            android:layout_margin="16dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_checkright"
+                            app:tint="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/title_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/text_size6"
+                            android:textStyle="bold"
+                            android:textColor="@color/grayApplication"
+                            android:text="Compra realizada com sucesso!"/>
+
+                        <TextView
+                            android:id="@+id/subtitle_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:textAlignment="center"
+                            android:textStyle="bold"
+                            android:text="@string/lorem_ipsum"/>
+
+                        <View style="@style/Divider.Horizontal"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginBottom="24dp"/>
+
+                        <TextView
+                            android:id="@+id/name_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size5"
+                            android:text="Detalhes"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Número do pedido #000000"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/lorem_ipsum"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/text_size3"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Endereço"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/addressInfo_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/lorem_ipsum"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/text_size3"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Método de pagamento"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/paymentMethod_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/lorem_ipsum"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/text_size3"/>
+
+                        <View style="@style/Divider.Horizontal"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginBottom="24dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lista de compras"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/products_rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:overScrollMode="never"
+                            android:nestedScrollingEnabled="true"/>
+
+
+                        <View style="@style/Divider.Horizontal"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginBottom="24dp"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="0"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView21"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="Subtotal" />
+
+                            <TextView
+                                android:id="@+id/subtotalTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="--,--" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0"
+                                android:text="Total"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/totalTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="--,--"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_gravity="center_horizontal|bottom"
+        android:orientation="vertical">
+
+        <View style="@style/Divider.Horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_application"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:padding="12dp"
+                android:textAllCaps="true"
+                android:layout_weight="1"
+                android:text="Rastrear encomenda"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAlignment="center"/>
+
+            <Button
+                style="@style/StyleButtonSmall"
+                android:id="@+id/continueShop_bt"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:text="Continuar comprando"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </FrameLayout>
