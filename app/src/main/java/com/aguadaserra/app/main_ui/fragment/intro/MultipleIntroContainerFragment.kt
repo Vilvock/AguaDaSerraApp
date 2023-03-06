@@ -40,7 +40,7 @@ class MultipleIntroContainerFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        useful.createLink(signUp_tv,
+        useful.createLink(signIn_tv,
             "Já possui uma conta? Entre aqui",
             "Entre aqui", object : ClickableSpan() {
                 override fun onClick(widget: View) {

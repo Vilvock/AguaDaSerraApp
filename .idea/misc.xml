@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable-v24/ic_close.xml" value="0.3545" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/bg_top_round.xml" value="0.303" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/gradient_background.xml" value="0.3545" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/ic_apple_seeklogo.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/ic_arrow_back.xml" value="0.303" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/ic_camera.xml" value="0.3545" />
@@ -21,12 +22,14 @@
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_carrousel_item.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_product.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_product_grid.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_user_address.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/dasdas.xml" value="0.3614583333333333" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/dialog_address.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/empty_list.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_cart.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_favorites.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_generate_ticket.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_generic_dialog.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_getting_location_permission.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_home.xml" value="0.3625" />
@@ -35,10 +38,13 @@
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_method_payment.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_multiple_intro_container.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_orders.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_pix.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_product_detail.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_recover_password.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_sign_in.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_sign_up.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_splash.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_ticket.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_update_password_by_token.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_user_address.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_user_data.xml" value="0.3625" />
