@@ -21,6 +21,9 @@
     <!--text normal-->
     <color name="gray2Application">#3C3C3C</color>
 
+
+    <color name="greenMoney">#008116</color>
+
     <color name="facebookBtColor">#1977F3</color>
 
 </resources>
