@@ -3,8 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/search_nav"
+        android:title=""
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always"/>
+
+
+    <item
         android:id="@+id/notification_nav"
         android:title=""
+        android:icon="@drawable/ic_bell"
         app:showAsAction="always"/>
+
 
 </menu>

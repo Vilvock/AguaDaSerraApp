@@ -24,6 +24,8 @@ class ProductDetailFragment : BaseFragment() {
     override var toolbarVisibility: Boolean = true
     override var bottomNavigationVisibility: Boolean = false
 
+    override var title: String = "Detalhes da oferta"
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

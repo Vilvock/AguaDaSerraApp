@@ -18,6 +18,9 @@ class MethodPaymentFragment : BaseFragment() {
     override var toolbarVisibility: Boolean = true
     override var bottomNavigationVisibility: Boolean = false
 
+
+    override var title: String = "Métodos de pagamento e entrega"
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

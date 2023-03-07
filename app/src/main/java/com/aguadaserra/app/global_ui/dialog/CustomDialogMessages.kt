@@ -13,6 +13,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.aguadaserra.app.R
 import com.aguadaserra.app.global_ui.components.SingleToast
 import com.aguadaserra.app.util.RecyclerItemListener
 import com.github.chrisbanes.photoview.PhotoView
@@ -62,27 +63,27 @@ class CustomDialogMessages (private val context: Context) {
 //        }
 //    }
 //
-//    fun openSucess(answer: Answer) {
-//
-//        val builder = AlertDialog.Builder(context)
-//        val alertDialog = builder.create()
-//        val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-//        val view: View = inflater.inflate(R.layout.dialog_sucess, null)
-//        alertDialog.setView(view)
-//        alertDialog.window!!.setBackgroundDrawableResource(android.R.color.transparent)
-//        alertDialog.setCanceledOnTouchOutside(false)
-//        alertDialog.setCancelable(false)
-//        alertDialog.show()
-//
-//        val nextBt = view.findViewById<Button>(R.id.next_bt)
-//
-//
-//        nextBt.setOnClickListener {
-//            answer.setOnClickListener()
-//            alertDialog.dismiss()
-//        }
-//
-//    }
+    fun openFormAddress(answer: Answer) {
+
+        val builder = AlertDialog.Builder(context)
+        val alertDialog = builder.create()
+        val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val view: View = inflater.inflate(R.layout.dialog_address, null)
+        alertDialog.setView(view)
+        alertDialog.window!!.setBackgroundDrawableResource(android.R.color.transparent)
+        alertDialog.setCanceledOnTouchOutside(true)
+        alertDialog.setCancelable(true)
+        alertDialog.show()
+
+        val finishBt = view.findViewById<Button>(R.id.finish_bt)
+
+
+        finishBt.setOnClickListener {
+            answer.setOnClickListener()
+            alertDialog.dismiss()
+        }
+
+    }
 //
 //    fun openDescription(answerString: AnswerString) {
 //

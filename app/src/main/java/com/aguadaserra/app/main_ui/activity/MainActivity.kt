@@ -97,6 +97,7 @@ class MainActivity : AppCompatActivity(), BaseActivity {
     override fun updatebottomNavigationVisibility(hasBottomNavigation: Boolean) {
         if (hasBottomNavigation) {
             nav_view_bottomnav.visibility = View.VISIBLE
+            mainLogo_iv.visibility = View.VISIBLE
 
             nav_view_bottomnav.setOnNavigationItemSelectedListener { item ->
 
@@ -124,6 +125,7 @@ class MainActivity : AppCompatActivity(), BaseActivity {
             }
         } else {
             nav_view_bottomnav.visibility = View.GONE
+            mainLogo_iv.visibility = View.GONE
 
         }
     }

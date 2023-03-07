@@ -29,6 +29,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
+                <ImageView
+                    android:id="@+id/mainLogo_iv"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/main_logo_2"/>
 
                 <TextView
                     android:id="@+id/toolbarTitle"

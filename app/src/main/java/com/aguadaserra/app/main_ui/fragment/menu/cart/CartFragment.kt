@@ -24,6 +24,8 @@ class CartFragment : BaseFragment() {
     override var toolbarVisibility: Boolean = true
     override var bottomNavigationVisibility: Boolean = true
 
+    override var title: String = "Carrinho"
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

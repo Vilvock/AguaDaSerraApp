@@ -40,7 +40,7 @@
                         android:scaleType="centerCrop"
                         android:background="@android:color/transparent"
                         android:src="@android:drawable/sym_def_app_icon"
-                        app:tint="@color/colorPrimary"
+                        app:tint="@color/grayApplication"
                         app:shapeAppearanceOverlay="@style/roundedImageView" />
 
                     <TextView
@@ -48,7 +48,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="lorem_ipsum"
+                        android:text="lorem ipsum"
                         android:maxLines="2"
                         android:ellipsize="end"/>
 
@@ -70,7 +70,8 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:padding="@dimen/padding_application"
-                android:background="@color/white">
+                android:background="@color/white"
+                android:elevation="10dp">
 
 
                 <LinearLayout

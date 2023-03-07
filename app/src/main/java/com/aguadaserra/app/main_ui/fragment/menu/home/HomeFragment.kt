@@ -1,10 +1,10 @@
 package com.aguadaserra.app.main_ui.fragment.menu.home
 
 import android.os.Bundle
+import android.view.*
+import android.widget.FrameLayout
+import android.widget.TextView
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -26,6 +26,8 @@ class HomeFragment : BaseFragment() {
     override var toolbarVisibility: Boolean = true
     override var bottomNavigationVisibility: Boolean = true
 
+    override var title: String = "Home"
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -36,6 +38,7 @@ class HomeFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setHasOptionsMenu(true)
 
         loadCarrousel()
 
@@ -74,6 +77,31 @@ class HomeFragment : BaseFragment() {
         productsGrid_rv.adapter = adapterGrid
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.toolbar_notification_menu, menu)
+//
+//        val menuItem = menu.findItem(R.id.notification_nav)
+//
+//        val actionView = menuItem.actionView
+//        textCartItemCount = actionView.findViewById(R.id.cart_badge) as TextView
+//        val bellIcon = actionView.findViewById(R.id.bell_icon) as FrameLayout
+//
+//        bellIcon.setOnClickListener {
+//
+//            navigation.navigate(R.id.action_userProfileFragment_to_notificationsFragment)
+//        }
+
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.notification_nav -> {
+                super.onOptionsItemSelected(item)
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
 
     private fun loadCarrousel() {
 

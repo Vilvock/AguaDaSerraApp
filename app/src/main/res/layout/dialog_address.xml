@@ -42,8 +42,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Atualizar endereço"
-                    android:textSize="@dimen/text_size6"
+                    android:text="Preencha os dados "
+                    android:textSize="@dimen/text_size5"
                     android:textStyle="bold" />
 
 

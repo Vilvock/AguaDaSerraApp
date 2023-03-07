@@ -6,7 +6,6 @@
         android:id="@+id/address_nav"
         android:title=""
         app:showAsAction="always"
-        android:icon="@drawable/ic_add_location"
-        android:iconTint="@color/white"/>
+        android:icon="@drawable/ic_add_location"/>
 
 </menu>

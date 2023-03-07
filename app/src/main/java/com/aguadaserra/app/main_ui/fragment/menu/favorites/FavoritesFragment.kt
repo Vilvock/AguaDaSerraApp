@@ -1,10 +1,8 @@
 package com.aguadaserra.app.main_ui.fragment.menu.favorites
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.aguadaserra.app.R
@@ -23,6 +21,9 @@ class FavoritesFragment : BaseFragment() {
 
     override var toolbarVisibility: Boolean = true
     override var bottomNavigationVisibility: Boolean = true
+
+
+    override var title: String = "Meus favoritos"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -56,5 +57,6 @@ class FavoritesFragment : BaseFragment() {
         favorites_rv.layoutManager = layoutManagerRv
         favorites_rv.adapter = adapter
     }
+
 
 }

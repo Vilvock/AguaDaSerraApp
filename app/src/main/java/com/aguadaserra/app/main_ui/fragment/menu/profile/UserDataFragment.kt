@@ -17,6 +17,8 @@ class UserDataFragment : BaseFragment() {
     override var hasBackButton: Boolean = true
     override var toolbarVisibility: Boolean = true
 
+    override var title: String = "Meu perfil"
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
