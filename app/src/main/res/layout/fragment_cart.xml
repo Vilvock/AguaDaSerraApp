@@ -27,10 +27,11 @@
 
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/products_rv"
+                        android:id="@+id/items_rv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:nestedScrollingEnabled="true"/>
+                        android:nestedScrollingEnabled="true"
+                        android:overScrollMode="never"/>
 
                 </FrameLayout>
 

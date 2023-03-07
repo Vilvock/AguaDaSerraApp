@@ -9,6 +9,7 @@
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/ic_add.xml" value="0.3545" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/ic_apple_seeklogo.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/ic_arrow_back.xml" value="0.303" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/ic_arrow_down.xml" value="0.3545" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/ic_camera.xml" value="0.3545" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/ic_checkright.xml" value="0.3545" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/ic_facebook_seeklogo.xml" value="0.22" />
@@ -25,6 +26,7 @@
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_carrousel_item.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_carrousel_product_item.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_cart_item.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_favorite.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_order.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_product.xml" value="0.3625" />

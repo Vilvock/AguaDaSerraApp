@@ -40,16 +40,17 @@
                     android:id="@+id/ratingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:numStars="5" />
+                    android:numStars="5"
+                    android:progress="50"
+                    android:progressTint="@color/yellowApplication"/>
+
 
                 <TextView
                     android:id="@+id/name_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:textSize="@dimen/text_size5"
                     android:text="@string/lorem_ipsum"
-                    android:textStyle="bold"
                     android:ellipsize="end"
                     android:maxLines="2"
                     android:minLines="2"
@@ -61,8 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="4dp"
-                    android:text="R$ 50,00"
-                    android:textSize="@dimen/text_size5"/>
+                    android:text="R$ 50,00"/>
 
             </LinearLayout>
 

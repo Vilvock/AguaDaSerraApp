@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.aguadaserra.app.R
@@ -13,6 +14,7 @@ import com.aguadaserra.app.global_ui.components.CircleRecyclerViewDecoration
 import com.aguadaserra.app.global_ui.config_fragment.BaseFragment
 import com.aguadaserra.app.main_ui.adapter.CarrouselItemAdapter
 import com.aguadaserra.app.main_ui.adapter.ProductAdapter
+import com.aguadaserra.app.main_ui.adapter.ProductGridAdapter
 import com.aguadaserra.app.util.RecyclerItemListener
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -57,6 +59,19 @@ class HomeFragment : BaseFragment() {
 
         products_rv.layoutManager = layoutManagerRv
         products_rv.adapter = adapter
+
+        val adapterGrid = ProductGridAdapter(requireActivity(), list, object : RecyclerItemListener {
+            override fun onClickListenerItem(item: Any?) {
+                super.onClickListenerItem(item)
+
+                navigation.navigate(R.id.action_homeFragment_to_productDetailFragment)
+            }
+
+        })
+
+
+        productsGrid_rv.layoutManager = GridLayoutManager(requireContext(), 2)
+        productsGrid_rv.adapter = adapterGrid
     }
 
 
