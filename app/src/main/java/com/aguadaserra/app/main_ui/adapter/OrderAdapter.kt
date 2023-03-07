@@ -29,7 +29,7 @@ class OrderAdapter(private val context: Context,
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.adapter_favorite, parent, false))
+        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.adapter_order, parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -37,6 +37,7 @@ class OrderAdapter(private val context: Context,
         val item = list[position]
 
 
+        holder.itemView.setOnClickListener { onListener.onClickListenerItem(item) }
 
     }
 

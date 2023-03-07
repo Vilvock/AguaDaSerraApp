@@ -23,8 +23,9 @@ import kotlinx.android.synthetic.main.fragment_generate_ticket.*
  */
 class GenerateTicketFragment : BaseFragment() {
 
+    override var hasBackButton: Boolean = false
     override var toolbarVisibility: Boolean = true
-    override var hasBackButton: Boolean = true
+    override var bottomNavigationVisibility: Boolean = false
 
     override var title: String = "Compra realizada!"
 

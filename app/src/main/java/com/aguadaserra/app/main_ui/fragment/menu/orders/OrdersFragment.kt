@@ -20,8 +20,9 @@ import kotlinx.android.synthetic.main.fragment_orders.*
  */
 class OrdersFragment : BaseFragment() {
 
-    override var toolbarVisibility: Boolean = false
+    override var toolbarVisibility: Boolean = true
     override var bottomNavigationVisibility: Boolean = true
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -42,7 +43,13 @@ class OrdersFragment : BaseFragment() {
         list.add(Any())
         list.add(Any())
 
-        val adapter = OrderAdapter(requireActivity(), list, object : RecyclerItemListener {})
+        val adapter = OrderAdapter(requireActivity(), list, object : RecyclerItemListener {
+            override fun onClickListenerItem(item: Any?) {
+                super.onClickListenerItem(item)
+
+                navigation.navigate(R.id.action_ordersFragment_to_orderDetailFragment)
+            }
+        })
         val layoutManagerRv: RecyclerView.LayoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
         orders_rv.layoutManager = layoutManagerRv

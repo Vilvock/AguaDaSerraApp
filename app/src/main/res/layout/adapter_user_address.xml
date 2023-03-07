@@ -15,6 +15,7 @@
             android:id="@+id/address_rb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimaryDark"
             android:visibility="gone"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true" />

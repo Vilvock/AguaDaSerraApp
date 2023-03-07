@@ -14,6 +14,9 @@ import com.aguadaserra.app.global_ui.config_fragment.BaseFragment
  */
 class UserDataFragment : BaseFragment() {
 
+    override var hasBackButton: Boolean = true
+    override var toolbarVisibility: Boolean = true
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

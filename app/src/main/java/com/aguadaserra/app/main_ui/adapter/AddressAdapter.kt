@@ -19,7 +19,7 @@ class AddressAdapter(private val context: Context,
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 //
-        val nameTv: RadioButton = itemView.findViewById(R.id.address_rb)
+        val addressRb: RadioButton = itemView.findViewById(R.id.address_rb)
 //        val commentTv: TextView = itemView.findViewById(R.id.comment_tv)
 //        val ratingBar: RatingBar = itemView.findViewById(R.id.ratingBar)
 //        val dateTv: TextView = itemView.findViewById(R.id.date_tv)
@@ -37,6 +37,7 @@ class AddressAdapter(private val context: Context,
 
         val item = list[position]
 
+        holder.addressRb.visibility = View.VISIBLE
 
 
     }

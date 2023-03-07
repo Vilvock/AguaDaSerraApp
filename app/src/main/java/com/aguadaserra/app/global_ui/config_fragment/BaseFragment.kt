@@ -2,9 +2,11 @@ package com.aguadaserra.app.global_ui.config_fragment
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.aguadaserra.app.R
 import com.aguadaserra.app.controller.webservice.config.ServiceResponse
@@ -47,7 +49,6 @@ abstract class BaseFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        refreshFragmentStyle()
 
         useful = Useful(requireContext())
         preferences = Preferences(requireContext())
@@ -56,30 +57,26 @@ abstract class BaseFragment : Fragment() {
         validation = Validation(requireContext())
         animation = Animation(requireContext())
 
+        refreshFragmentStyle()
+
         navigation = requireActivity().findNavController(navController)
     }
 
     fun refreshFragmentStyle() {
-        if (toolbarVisibility) {
-            updateTitle(title)
-            updateHasBackButton(hasBackButton)
-            updateSystemBarColor(systemBarColor)
-        } else {
-            updateVisibilityToolbar()
-        }
-
-        if (bottomNavigationVisibility) {
-            updateVisibilityBottomNavigation()
-        }
+        updateTitle(title)
+        updateHasBackButton(hasBackButton)
+        updateSystemBarColor(systemBarColor)
+        updateVisibilityToolbar()
+        updateVisibilityBottomNavigation()
 
     }
 
     fun updateVisibilityBottomNavigation() {
-        (requireActivity() as? BaseActivity)?.updatebottomNavigationVisibility(true)
+        (requireActivity() as? BaseActivity)?.updatebottomNavigationVisibility(bottomNavigationVisibility)
     }
 
     fun updateVisibilityToolbar() {
-        (requireActivity() as? BaseActivity)?.updateToolbarVisibility(false)
+        (requireActivity() as? BaseActivity)?.updateToolbarVisibility(toolbarVisibility)
     }
 
     fun updateHasBackButton(hasBackButton: Boolean) {
@@ -97,15 +94,15 @@ abstract class BaseFragment : Fragment() {
         (requireActivity() as? BaseActivity)?.updateSystemBarColor(color)
     }
 
-//    fun getMainParentFragment(): Fragment? {
-//        try {
-//            val navHostFragment =
-//                requireActivity().supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-//            return navHostFragment.childFragmentManager.fragments[0]
-//        } catch (e:Exception) {
-//            return null
-//        }
-//    }
+    fun getMainParentFragment(): Fragment? {
+        try {
+            val navHostFragment =
+                requireActivity().supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+            return navHostFragment.childFragmentManager.fragments[0]
+        } catch (e:Exception) {
+            return null
+        }
+    }
 
     open fun onBackPressed() {
         findNavController().popBackStack()

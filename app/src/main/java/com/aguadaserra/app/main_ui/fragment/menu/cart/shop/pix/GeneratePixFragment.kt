@@ -32,8 +32,9 @@ import java.io.FileOutputStream
  */
 class GeneratePixFragment : BaseFragment() {
 
+    override var hasBackButton: Boolean = false
     override var toolbarVisibility: Boolean = true
-    override var hasBackButton: Boolean = true
+    override var bottomNavigationVisibility: Boolean = false
 
     private val permissions = arrayOf(
         Manifest.permission.READ_EXTERNAL_STORAGE,

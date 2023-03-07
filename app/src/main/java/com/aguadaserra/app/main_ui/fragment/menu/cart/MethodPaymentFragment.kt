@@ -6,11 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.aguadaserra.app.R
+import com.aguadaserra.app.global_ui.config_fragment.BaseFragment
+import kotlinx.android.synthetic.main.fragment_method_payment.*
 
 /**
  * A simple [Fragment] subclass.
  */
-class MethodPaymentFragment : Fragment() {
+class MethodPaymentFragment : BaseFragment() {
+
+    override var hasBackButton: Boolean = true
+    override var toolbarVisibility: Boolean = true
+    override var bottomNavigationVisibility: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -18,6 +24,21 @@ class MethodPaymentFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_method_payment, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        address_item.setOnClickListener {
+            navigation.navigate(R.id.action_methodPaymentFragment_to_userAddressFragment)
+        }
+
+        pix.setOnClickListener {
+            navigation.navigate(R.id.action_methodPaymentFragment_to_pixFragment) }
+
+
+        ticket.setOnClickListener {
+            navigation.navigate(R.id.action_methodPaymentFragment_to_ticketFragment) }
     }
 
 }

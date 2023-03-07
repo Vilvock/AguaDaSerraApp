@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
  */
 class HomeFragment : BaseFragment() {
 
-    override var toolbarVisibility: Boolean = false
+    override var toolbarVisibility: Boolean = true
     override var bottomNavigationVisibility: Boolean = true
 
     override fun onCreateView(
@@ -45,7 +45,14 @@ class HomeFragment : BaseFragment() {
         list.add(Any())
         list.add(Any())
 
-        val adapter = ProductAdapter(requireActivity(), list, object : RecyclerItemListener {})
+        val adapter = ProductAdapter(requireActivity(), list, object : RecyclerItemListener {
+            override fun onClickListenerItem(item: Any?) {
+                super.onClickListenerItem(item)
+
+                navigation.navigate(R.id.action_homeFragment_to_productDetailFragment)
+            }
+
+        })
         val layoutManagerRv: RecyclerView.LayoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
         products_rv.layoutManager = layoutManagerRv

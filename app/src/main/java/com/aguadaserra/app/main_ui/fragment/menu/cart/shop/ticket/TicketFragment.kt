@@ -20,8 +20,9 @@ import com.aguadaserra.app.global_ui.dialog.GenericDialogFragment
  */
 class TicketFragment : BaseFragment() {
 
-    override var toolbarVisibility: Boolean = true
     override var hasBackButton: Boolean = true
+    override var toolbarVisibility: Boolean = true
+    override var bottomNavigationVisibility: Boolean = false
 
     override var title: String = "Boleto Bancário"
 

@@ -12,6 +12,7 @@ import com.aguadaserra.app.global_model.Photo
 import com.aguadaserra.app.global_ui.components.CircleRecyclerViewDecoration
 import com.aguadaserra.app.global_ui.config_fragment.BaseFragment
 import com.aguadaserra.app.main_ui.adapter.CarrouselItemAdapter
+import com.aguadaserra.app.main_ui.adapter.CarrouselProductItemAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
 
 /**
@@ -19,6 +20,9 @@ import kotlinx.android.synthetic.main.fragment_home.*
  */
 class ProductDetailFragment : BaseFragment() {
 
+    override var hasBackButton: Boolean = true
+    override var toolbarVisibility: Boolean = true
+    override var bottomNavigationVisibility: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,7 +50,7 @@ class ProductDetailFragment : BaseFragment() {
         photoList.add(Photo())
         photoList.add(Photo())
 
-        val adapter = CarrouselItemAdapter(photoList)
+        val adapter = CarrouselProductItemAdapter(photoList)
 
 
         carrousel_rv.layoutManager = (object : LinearLayoutManager(requireContext(), HORIZONTAL, false) {

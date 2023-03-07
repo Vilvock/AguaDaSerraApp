@@ -17,8 +17,9 @@ import kotlinx.android.synthetic.main.fragment_pix.*
  */
 class PixFragment : BaseFragment() {
 
-    override var toolbarVisibility: Boolean = true
     override var hasBackButton: Boolean = true
+    override var toolbarVisibility: Boolean = true
+    override var bottomNavigationVisibility: Boolean = false
 
     override var title: String = "PIX"
 

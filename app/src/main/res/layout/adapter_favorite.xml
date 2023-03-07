@@ -23,11 +23,11 @@
                 android:layout_width="90dp"
                 android:layout_height="90dp"
                 android:layout_margin="12dp"
+                app:shapeAppearanceOverlay="@style/minRadiusImageView"
                 android:background="@android:color/transparent"
                 android:scaleType="centerCrop"
-                android:src="@android:drawable/sym_def_app_icon"
-                app:shapeAppearanceOverlay="@style/minRadiusImageView"
-                app:tint="@color/grayApplication" />
+                android:src="@drawable/main_solid_background"
+                app:tint="@color/lightGrayApplication" />
 
 
             <LinearLayout

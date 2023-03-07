@@ -17,9 +17,11 @@
         <ImageView
             android:id="@+id/banner_iv"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:background="@color/grayApplication"
-            android:scaleType="centerCrop"/>
+            android:layout_height="300dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/main_solid_background"
+            app:tint="@color/lightGrayApplication" />
 
     </androidx.cardview.widget.CardView>
 

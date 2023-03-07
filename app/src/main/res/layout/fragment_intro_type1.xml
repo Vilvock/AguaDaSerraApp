@@ -45,6 +45,7 @@
                 android:layout_margin="4dp"
                 android:layout_weight="0"
                 android:fontFamily="@font/inter_semibold"
+                android:textColor="@color/white"
                 android:text="TextView"
                 android:textSize="@dimen/text_size5"
                 android:textStyle="bold" />
@@ -57,7 +58,7 @@
                 android:fontFamily="@font/inter_light"
                 android:text="@string/lorem_ipsum"
                 android:textAlignment="center"
-                android:textColor="@color/gray2Application" />
+                android:textColor="@color/white" />
 
             <LinearLayout
                 android:id="@+id/interactions_ll"

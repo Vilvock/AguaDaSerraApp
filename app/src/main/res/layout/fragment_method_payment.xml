@@ -39,6 +39,7 @@
         </com.google.android.material.tabs.TabLayout>
 
         <include
+            android:id="@+id/address_item"
             layout="@layout/adapter_user_address"/>
 
         <View

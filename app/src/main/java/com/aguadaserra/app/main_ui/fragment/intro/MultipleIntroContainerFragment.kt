@@ -44,14 +44,14 @@ class MultipleIntroContainerFragment : BaseFragment() {
             "Já possui uma conta? Entre aqui",
             "Entre aqui", object : ClickableSpan() {
                 override fun onClick(widget: View) {
-                    navigation.navigate(R.id.action_signInFragment_to_signUpFragment)
+                    navigation.navigate(R.id.action_multipleIntroContainerFragment_to_signInFragment)
                 }
 
                 override fun updateDrawState(ds: TextPaint) {
                     super.updateDrawState(ds)
                     // this is where you set link color, underline, typeface etc.
-                    val linkColor = ContextCompat.getColor(requireActivity(), R.color.colorPrimary)
-                    ds.color = linkColor
+//                    val linkColor = ContextCompat.getColor(requireActivity(), R.color.colorPrimary)
+//                    ds.color = linkColor
                     ds.isUnderlineText = true
                 }
             })

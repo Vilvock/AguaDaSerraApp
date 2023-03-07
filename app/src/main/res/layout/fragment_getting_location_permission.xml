@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main_gradient_background"
     android:fillViewport="true"
     tools:context=".main_ui.fragment.intro.GettingLocationPermissionFragment">
 
@@ -19,16 +20,26 @@
             android:layout_height="match_parent"
             android:padding="@dimen/padding_application">
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:padding="0dp"
-                android:src="@drawable/map_image256"
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shape="oval"
+                app:cardCornerRadius="90dp"
+                app:cardElevation="6dp"
                 app:layout_constraintBottom_toTopOf="@+id/linearLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:padding="30dp"
+                    android:src="@drawable/map_image256" />
+
+            </androidx.cardview.widget.CardView>
+
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -44,7 +55,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Permitir localização"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/text_size7"
                     android:textStyle="bold" />
 
@@ -52,6 +63,7 @@
                     android:id="@+id/about_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="24dp"
                     android:text="é necessário permitir o acesso à sua localização antes de prosseguir"

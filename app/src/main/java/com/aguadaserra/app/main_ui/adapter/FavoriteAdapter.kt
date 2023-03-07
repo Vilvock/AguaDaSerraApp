@@ -38,6 +38,7 @@ class FavoriteAdapter(private val context: Context,
 
 
 
+        holder.itemView.setOnClickListener { onListener.onClickListenerItem(item) }
     }
 
     override fun getItemCount(): Int {

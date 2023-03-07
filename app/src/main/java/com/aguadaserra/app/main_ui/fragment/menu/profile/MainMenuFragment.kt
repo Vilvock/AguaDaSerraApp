@@ -16,6 +16,9 @@ import kotlinx.android.synthetic.main.fragment_main_menu.*
 class MainMenuFragment : BaseFragment() {
 
 
+    override var toolbarVisibility: Boolean = false
+    override var bottomNavigationVisibility: Boolean = true
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

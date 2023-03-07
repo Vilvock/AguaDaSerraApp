@@ -32,6 +32,7 @@ class SignInFragment : BaseFragment() {
     private val viewModel: SignInViewModel by viewModels()
 
     override var hasBackButton: Boolean = true
+    override var toolbarVisibility: Boolean = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

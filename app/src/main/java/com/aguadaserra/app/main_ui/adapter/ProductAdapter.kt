@@ -37,6 +37,7 @@ class ProductAdapter(private val context: Context,
         val item = list[position]
 
 
+        holder.itemView.setOnClickListener { onListener.onClickListenerItem(item) }
 
     }
 

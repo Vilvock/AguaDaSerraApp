@@ -4,7 +4,7 @@
     >
 
 
-    <solid android:color="@color/grayApplication"/>
+    <solid android:color="@color/white"/>
 
 
 </shape>
