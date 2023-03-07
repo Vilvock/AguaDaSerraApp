@@ -27,6 +27,8 @@ class GettingLocationPermissionFragment : BaseFragment() {
         Manifest.permission.ACCESS_COARSE_LOCATION
     )
 
+    override var toolbarVisibility: Boolean = false
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
