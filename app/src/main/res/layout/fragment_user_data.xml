@@ -27,9 +27,8 @@
                 android:layout_height="140dp"                        android:layout_gravity="center"
                 android:scaleType="centerCrop"
                 android:background="@android:color/transparent"
-                android:src="@android:drawable/sym_def_app_icon"
-                app:tint="@color/colorPrimary"
-                app:shapeAppearanceOverlay="@style/roundedImageView" />
+                android:src="@drawable/person"
+                app:shapeAppearanceOverlay="@style/roundedImageView"/>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/updateAvatar_fab"

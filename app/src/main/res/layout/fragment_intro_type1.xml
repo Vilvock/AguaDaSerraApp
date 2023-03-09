@@ -16,6 +16,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:tint="@color/white"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

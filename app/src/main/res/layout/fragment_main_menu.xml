@@ -39,20 +39,38 @@
                         android:layout_gravity="center"
                         android:scaleType="centerCrop"
                         android:background="@android:color/transparent"
-                        android:src="@android:drawable/sym_def_app_icon"
-                        app:tint="@color/grayApplication"
+                        android:src="@drawable/person"
                         app:shapeAppearanceOverlay="@style/roundedImageView" />
 
-                    <TextView
-                        android:id="@+id/name_tv"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/lorem_ipsum"
-                        android:maxLines="2"
-                        android:ellipsize="end"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/text_size5"/>
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/name_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Lorem Ipsum Nome"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_size5"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="email@emai.com.br"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:textSize="@dimen/text_size3"/>
+                    </LinearLayout>
+
+
+
+
 
                     <ImageButton
                         android:id="@+id/userData_ib"
