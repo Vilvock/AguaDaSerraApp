@@ -71,25 +71,15 @@ class MultipleIntroContainerFragment : BaseFragment() {
         }
 
         fragmentList.add(
-            IntroType1Fragment("Seja Bem-vindo!", "Nas próximas telas apresentaremos\n" +
-                "as principais funcionalidades do\n" +
-                "aplicativo e como você poderá ter\n" +
-                "uma experiência incrível.", 0)
+            IntroType1Fragment("A Água da Serra é uma marca historicamente jovem.", "", 0)
         )
 
         fragmentList.add(
-            IntroType1Fragment("Atualize o seu Perfil", "Adicione uma foto para o seu\n" +
-                "perfil e atualize suas informações.\n\n" +
-                "Dessa forma, outras pessoas\n" +
-                "poderão saber mais sobre você.", 1)
+            IntroType1Fragment("Agora com mais sabores além do original", "", 1)
         )
 
         fragmentList.add(
-            IntroType1Fragment("Ajuste suas Preferências", "Aqui você determina quais serão os\n" +
-                "critérios de pesquisa para se\n" +
-                "conectar com outras pessoas e\n" +
-                "permitirá encontros mais\n" +
-                "interessantes.", 2)
+            IntroType1Fragment("Sabores para todos os gostos", "", 2)
         )
 
 

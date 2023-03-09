@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".ui.fragment.main_menu.shop.pix.GeneratePixFragment">
+    tools:context=".main_ui.fragment.menu.cart.shop.pix.GeneratePixFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,14 +25,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Copie este código para pagar"
                     android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -40,7 +38,6 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/textView11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -49,7 +46,6 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/textView12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="3. Escaneie o seguinte código:"
@@ -58,7 +54,7 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/qrcodeImg"
+                android:id="@+id/qrCode_iv"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
                 android:layout_marginTop="10dp"
@@ -72,42 +68,31 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/cod_barras_tv"
+                    android:id="@+id/barcode_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:scrollHorizontally="true"
-                    android:textColor="#C3000000" />
+                    android:scrollHorizontally="true" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:drawablePadding="10dp"
-                android:text="A liberação das moedas ocorrerá de forma instantânea."
-                android:textColor="#9F000000"
-                app:drawableTint="#97000000" />
 
             <Button
-                android:id="@+id/copycodePix"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/StyleButtonSmall"
+                android:id="@+id/copyCode_bt"
                 android:text="Copiar código" />
 
+
             <Button
-                android:id="@+id/savePixImg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/StyleButtonSmall"
+                android:id="@+id/saveImage_bt"
+                android:layout_marginTop="20dp"
                 android:text="Salvar imagem"/>
 
 
+
             <Button
+                style="@style/StyleButtonStrokes"
                 android:id="@+id/ok_bt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorPrimaryDark"
                 android:layout_marginTop="20dp"
                 android:text="OK!"/>
 

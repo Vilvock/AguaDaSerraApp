@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.aguadaserra.app.R
 import com.aguadaserra.app.global_model.Photo
 
-class CarrouselProductItemAdapter(private val list: List<Photo>):
+class CarrouselProductItemAdapter(private val list: List<Int>):
     RecyclerView.Adapter<CarrouselProductItemAdapter.Holder>() {
 
     class Holder(itemView: View) : RecyclerView.ViewHolder(itemView){
@@ -23,8 +23,9 @@ class CarrouselProductItemAdapter(private val list: List<Photo>):
 
     override fun onBindViewHolder(holder: Holder, @SuppressLint("RecyclerView") position: Int) {
 
+        val item = list[position]
 
-//        holder.bannerIv.setImageResource(R.drawable.banner_sir)
+        holder.bannerIv.setImageResource(item)
     }
 
     override fun getItemCount(): Int {

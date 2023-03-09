@@ -62,10 +62,10 @@ class GeneratePixFragment : BaseFragment() {
         val decodeBase64 = Base64.decode(data, Base64.DEFAULT)
         var qrcode64Converted = decodeBase64.toString(charset("UTF-8"))
 
-        cod_barras_tv.text = qrcode
+        barcode_tv.text = qrcode
         generateQRCode(qrcode)
 
-        savePixImg.setOnClickListener {
+        saveImage_bt.setOnClickListener {
             if (!confirmPermissions()) {
 
                 requestPermissions(permissions, 1)
@@ -74,7 +74,7 @@ class GeneratePixFragment : BaseFragment() {
             saveImage()
         }
 
-        copycodePix.setOnClickListener {
+        copyCode_bt.setOnClickListener {
 
             setClipboard(requireActivity(), qrcode)
             singleToast.show(requireActivity(), "Pix copiado para área de transferencia.", Toast.LENGTH_SHORT)
@@ -124,7 +124,7 @@ class GeneratePixFragment : BaseFragment() {
     private fun saveImage(){
         //to get the image from the ImageView (say iv)
         //to get the image from the ImageView (say iv)
-        val bitmap = qrcodeImg.drawable.toBitmap()
+        val bitmap = qrCode_iv.drawable.toBitmap()
 
         var outStream: FileOutputStream? = null
         val sdCard: File = Environment.getExternalStorageDirectory()
@@ -154,7 +154,7 @@ class GeneratePixFragment : BaseFragment() {
                     bmp.setPixel(x, y, if (bitMatrix[x, y]) Color.BLACK else Color.WHITE)
                 }
             }
-            qrcodeImg.setImageBitmap(bmp)
+            qrCode_iv.setImageBitmap(bmp)
         } catch (e: WriterException) {
             e.printStackTrace()
         }

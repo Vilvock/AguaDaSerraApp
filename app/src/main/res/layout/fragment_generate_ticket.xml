@@ -66,10 +66,10 @@
                 android:text="Copiar código" />
 
             <Button
-                style="@style/StyleButtonSmall"
+                style="@style/StyleButtonStrokes"
                 android:id="@+id/ok_bt"
-                android:layout_marginBottom="20dp"
-                android:text="Ok" />
+                android:layout_marginTop="20dp"
+                android:text="OK!"/>
 
         </LinearLayout>
     </LinearLayout>

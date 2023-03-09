@@ -41,44 +41,21 @@ class IntroType1Fragment(private val title: String, private val subTitle: String
 
         when (position) {
             0 -> {
-//                drawable = resources.getDrawable(R.drawable.intro1_image)
-//                color = resources.getColor(R.color.colorPrimaryDark)
+                drawable = resources.getDrawable(R.drawable.intro1_image)
             }
-//            1 -> {
-//
-//                drawable = resources.getDrawable(R.drawable.intro2_image)
-//                color = resources.getColor(R.color.purpleApplication)
-//            }
+            1 -> {
+
+                drawable = resources.getDrawable(R.drawable.intro2_image)
+            }
             2 -> {
-//
-//                drawable = resources.getDrawable(R.drawable.intro3_image)
-//                color = resources.getColor(R.color.yellow700)
+
+                drawable = resources.getDrawable(R.drawable.intro3_image)
             }
 
-            else -> {
-
-//                drawable = resources.getDrawable(R.drawable.intro6_image)
-//                color = resources.getColor(R.color.yellow700)
-//
-//                interactions_ll.visibility = View.VISIBLE
-            }
         }
 
-//        default_iv.setImageDrawable(drawable)
-//        rootView.setBackgroundColor(color)
+        default_iv.setImageDrawable(drawable)
 
-//        ok_bt.setOnClickListener {
-//            if (checkBox.isChecked) {
-//
-//                preferences.storeInt(Preferences.ENTERING_FIRST_TIME, 0)
-//            } else {
-//
-//                preferences.storeInt(Preferences.ENTERING_FIRST_TIME, 2)
-//            }
-//
-//            startActivity(Intent(requireActivity(), MainActivity::class.java))
-//            requireActivity().finishAffinity()
-//        }
     }
 
 }

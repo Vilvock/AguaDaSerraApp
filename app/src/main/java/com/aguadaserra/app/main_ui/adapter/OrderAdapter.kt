@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.aguadaserra.app.R
 import com.aguadaserra.app.util.RecyclerItemListener
+import com.google.android.material.imageview.ShapeableImageView
 
 class OrderAdapter(private val context: Context,
                    private val list: List<Any>,
@@ -23,7 +24,7 @@ class OrderAdapter(private val context: Context,
 //        val ratingBar: RatingBar = itemView.findViewById(R.id.ratingBar)
 //        val dateTv: TextView = itemView.findViewById(R.id.date_tv)
 //        val numberNoReadMsgsTv: TextView = itemView.findViewById(R.id.numberMsgs_tv)
-//        val avatarIv: ShapeableImageView = itemView.findViewById(R.id.avatar_iv)
+        val avatarIv: ShapeableImageView = itemView.findViewById(R.id.avatar_iv)
 
     }
 
@@ -36,6 +37,48 @@ class OrderAdapter(private val context: Context,
 
         val item = list[position]
 
+        when(position) {
+            0 -> {
+
+                holder.avatarIv.setImageResource(R.drawable.randon1)
+            }
+            1 -> {
+
+                holder.avatarIv.setImageResource(R.drawable.randon2)
+            }
+            2 -> {
+
+                holder.avatarIv.setImageResource(R.drawable.randon3)
+            }
+            3 -> {
+
+                holder.avatarIv.setImageResource(R.drawable.randon4)
+            }
+            4 -> {
+
+                holder.avatarIv.setImageResource(R.drawable.randon5)
+            }
+            5 -> {
+
+                holder.avatarIv.setImageResource(R.drawable.randon6)
+            }
+            6 -> {
+
+                holder.avatarIv.setImageResource(R.drawable.randon7)
+            }
+            7 -> {
+
+                holder.avatarIv.setImageResource(R.drawable.randon8)
+            }
+            8 -> {
+
+                holder.avatarIv.setImageResource(R.drawable.randon9)
+            }
+            9 -> {
+
+                holder.avatarIv.setImageResource(R.drawable.randon10)
+            }
+        }
 
         holder.itemView.setOnClickListener { onListener.onClickListenerItem(item) }
 

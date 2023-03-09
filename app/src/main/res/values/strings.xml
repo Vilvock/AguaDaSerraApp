@@ -23,6 +23,9 @@
     <string name="cart">Carrinho</string>
     <string name="orders">Meus Pedidos</string>
     <string name="favorites">Meus Favoritos</string>
-    <string name="my_profile">Meu Perfil</string>
+    <string name="menu">Menu principal</string>
+    <string name="logout">Você tem certeza que deseja realizar seu logout?</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
 
 </resources>

@@ -49,6 +49,11 @@ class HomeFragment : BaseFragment() {
         list.add(Any())
         list.add(Any())
         list.add(Any())
+        list.add(Any())
+        list.add(Any())
+        list.add(Any())
+        list.add(Any())
+        list.add(Any())
 
         val adapter = ProductAdapter(requireActivity(), list, object : RecyclerItemListener {
             override fun onClickListenerItem(item: Any?) {
@@ -105,11 +110,10 @@ class HomeFragment : BaseFragment() {
 
     private fun loadCarrousel() {
 
-        val photoList = ArrayList<Photo>()
+        val photoList = ArrayList<Int>()
 
-        photoList.add(Photo())
-        photoList.add(Photo())
-        photoList.add(Photo())
+        photoList.add(R.drawable.banner1_image)
+        photoList.add(R.drawable.banner2_image)
 
         val adapter = CarrouselItemAdapter(photoList)
 

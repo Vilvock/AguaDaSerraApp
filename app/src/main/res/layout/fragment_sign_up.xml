@@ -108,12 +108,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="24dp"
-                android:gravity="center_vertical"
                 android:layout_weight="0"
-                android:orientation="horizontal">
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="invisible">
 
-                <View style="@style/Divider.Horizontal"
-                    android:layout_weight="1"/>
+                <View
+                    style="@style/Divider.Horizontal"
+                    android:layout_weight="1" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -124,8 +126,9 @@
                     android:text="ou crie uma conta com" />
 
 
-                <View style="@style/Divider.Horizontal"
-                    android:layout_weight="1"/>
+                <View
+                    style="@style/Divider.Horizontal"
+                    android:layout_weight="1" />
             </LinearLayout>
 
         </LinearLayout>
@@ -135,7 +138,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center|top"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="invisible">
 
             <LinearLayout
                 android:layout_width="60dp"

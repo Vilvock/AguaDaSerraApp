@@ -14,7 +14,8 @@
         <ImageView
             android:id="@+id/default_iv"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
+            app:tint="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +49,8 @@
                 android:textColor="@color/white"
                 android:text="TextView"
                 android:textSize="@dimen/text_size5"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textAlignment="center"/>
 
             <TextView
                 android:id="@+id/subTitleIntro_tv"

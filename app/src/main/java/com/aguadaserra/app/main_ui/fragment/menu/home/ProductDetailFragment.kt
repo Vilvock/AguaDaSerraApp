@@ -46,13 +46,16 @@ class ProductDetailFragment : BaseFragment() {
 
     private fun loadCarrousel() {
 
-        val photoList = ArrayList<Photo>()
 
-        photoList.add(Photo())
-        photoList.add(Photo())
-        photoList.add(Photo())
 
-        val adapter = CarrouselProductItemAdapter(photoList)
+        val photoList = ArrayList<Int>()
+
+        photoList.add(R.drawable.randon1)
+        photoList.add(R.drawable.randon2)
+        photoList.add(R.drawable.randon3)
+        photoList.add(R.drawable.randon4)
+
+        val adapter = CarrouselItemAdapter(photoList)
 
 
         carrousel_rv.layoutManager = (object : LinearLayoutManager(requireContext(), HORIZONTAL, false) {
