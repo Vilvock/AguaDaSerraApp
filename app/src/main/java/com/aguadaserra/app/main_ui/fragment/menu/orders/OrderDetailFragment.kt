@@ -47,7 +47,6 @@ class OrderDetailFragment : BaseFragment() {
             override fun onClickListenerItem(item: Any?) {
                 super.onClickListenerItem(item)
 
-                navigation.navigate(R.id.action_homeFragment_to_productDetailFragment)
             }
 
         })

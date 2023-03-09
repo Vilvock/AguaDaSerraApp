@@ -24,6 +24,7 @@ import com.google.zxing.BarcodeFormat
 import com.google.zxing.WriterException
 import com.google.zxing.qrcode.QRCodeWriter
 import kotlinx.android.synthetic.main.fragment_generate_pix.*
+import kotlinx.android.synthetic.main.fragment_method_payment.*
 import java.io.File
 import java.io.FileOutputStream
 
@@ -54,35 +55,36 @@ class GeneratePixFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val qrcode: String = requireArguments().getString("qrcode")!!
-        val qrcode64: String = requireArguments().getString("qrcode_64")!!
-
-        val data: ByteArray = qrcode64.toByteArray()
-        val encodeBase64 = Base64.encodeToString(data, Base64.DEFAULT)
-        val decodeBase64 = Base64.decode(data, Base64.DEFAULT)
-        var qrcode64Converted = decodeBase64.toString(charset("UTF-8"))
-
-        barcode_tv.text = qrcode
-        generateQRCode(qrcode)
-
-        saveImage_bt.setOnClickListener {
-            if (!confirmPermissions()) {
-
-                requestPermissions(permissions, 1)
-                return@setOnClickListener
-            }
-            saveImage()
-        }
-
-        copyCode_bt.setOnClickListener {
-
-            setClipboard(requireActivity(), qrcode)
-            singleToast.show(requireActivity(), "Pix copiado para área de transferencia.", Toast.LENGTH_SHORT)
-
-        }
+//        val qrcode: String = requireArguments().getString("qrcode")!!
+//        val qrcode64: String = requireArguments().getString("qrcode_64")!!
+//
+//        val data: ByteArray = qrcode64.toByteArray()
+//        val encodeBase64 = Base64.encodeToString(data, Base64.DEFAULT)
+//        val decodeBase64 = Base64.decode(data, Base64.DEFAULT)
+//        var qrcode64Converted = decodeBase64.toString(charset("UTF-8"))
+//
+//        barcode_tv.text = qrcode
+//        generateQRCode(qrcode)
+//
+//        saveImage_bt.setOnClickListener {
+//            if (!confirmPermissions()) {
+//
+//                requestPermissions(permissions, 1)
+//                return@setOnClickListener
+//            }
+//            saveImage()
+//        }
+//
+//        copyCode_bt.setOnClickListener {
+//
+//            setClipboard(requireActivity(), qrcode)
+//            singleToast.show(requireActivity(), "Pix copiado para área de transferencia.", Toast.LENGTH_SHORT)
+//
+//        }
 
         ok_bt.setOnClickListener {
-            navigation.popBackStack()
+                navigation.navigate(R.id.action_generatePixFragment_to_successFragment)
+
         }
 
     }

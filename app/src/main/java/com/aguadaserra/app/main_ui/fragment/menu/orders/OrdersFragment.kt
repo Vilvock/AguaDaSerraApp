@@ -23,7 +23,7 @@ class OrdersFragment : BaseFragment() {
     override var toolbarVisibility: Boolean = true
     override var bottomNavigationVisibility: Boolean = true
 
-    override var title: String = "Histórico de pedidos"
+    override var title: String = "Meus Pedidos"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

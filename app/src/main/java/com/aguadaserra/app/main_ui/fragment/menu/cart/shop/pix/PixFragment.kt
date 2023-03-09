@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.aguadaserra.app.R
 import com.aguadaserra.app.global_ui.config_fragment.BaseFragment
+import kotlinx.android.synthetic.main.fragment_method_payment.*
 import kotlinx.android.synthetic.main.fragment_pix.*
 
 /**
@@ -35,6 +36,9 @@ class PixFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        next_bt.setOnClickListener {
+            navigation.navigate(R.id.action_pixFragment_to_generatePixFragment)
+        }
     }
 
 

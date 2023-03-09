@@ -49,18 +49,17 @@ class MethodPaymentFragment : BaseFragment() {
             override fun onTabSelected(tab: TabLayout.Tab?) {
 
                 if (tab!!.position == 0) {
-
+                    schedule_ll.visibility = View.GONE
                 } else {
 
+                    schedule_ll.visibility = View.VISIBLE
                 }
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
             }
 
         })

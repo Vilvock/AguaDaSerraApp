@@ -23,7 +23,7 @@ class FavoritesFragment : BaseFragment() {
     override var bottomNavigationVisibility: Boolean = true
 
 
-    override var title: String = "Meus favoritos"
+    override var title: String = "Meus Favoritos"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

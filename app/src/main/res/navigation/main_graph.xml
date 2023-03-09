@@ -302,11 +302,24 @@
         android:id="@+id/generatePixFragment"
         android:name="com.aguadaserra.app.main_ui.fragment.menu.cart.shop.pix.GeneratePixFragment"
         android:label="GeneratePixFragment"
-        tools:layout="@layout/fragment_generate_pix"/>
+        tools:layout="@layout/fragment_generate_pix">
+        <action
+            android:id="@+id/action_generatePixFragment_to_successFragment"
+            app:destination="@id/successFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/generateTicketFragment"
         android:name="com.aguadaserra.app.main_ui.fragment.menu.cart.shop.ticket.GenerateTicketFragment"
         android:label="fragment_generate_ticket"
         tools:layout="@layout/fragment_generate_ticket" />
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.aguadaserra.app.main_ui.fragment.menu.cart.shop.SuccessFragment"
+        android:label="fragment_success"
+        tools:layout="@layout/fragment_success" />
 
 </navigation>
