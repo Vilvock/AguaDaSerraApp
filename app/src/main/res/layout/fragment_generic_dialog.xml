@@ -86,7 +86,8 @@
                     android:layout_weight="1"
                     android:elevation="0dp"
                     android:gravity="center"
-                    android:padding="12dp" />
+                    android:padding="12dp"
+                    android:textColor="@color/colorPrimaryDark"/>
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

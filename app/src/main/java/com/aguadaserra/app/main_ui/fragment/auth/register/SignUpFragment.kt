@@ -1,5 +1,7 @@
 package com.aguadaserra.app.main_ui.fragment.auth.register
 
+import android.content.Intent
+import android.graphics.Typeface
 import android.os.Bundle
 import android.text.TextPaint
 import android.text.style.ClickableSpan
@@ -12,6 +14,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import com.aguadaserra.app.R
 import com.aguadaserra.app.global_ui.config_fragment.BaseFragment
+import com.aguadaserra.app.main_ui.activity.WebViewActivity
 import com.aguadaserra.app.main_ui.fragment.auth.register.SignUpViewModel
 import kotlinx.android.synthetic.main.fragment_sign_in.*
 import kotlinx.android.synthetic.main.fragment_sign_in.signUp_tv
@@ -64,6 +67,23 @@ class SignUpFragment : BaseFragment() {
                     val linkColor = ContextCompat.getColor(requireActivity(), R.color.colorPrimary)
                     ds.color = linkColor
                     ds.isUnderlineText = true
+                }
+            })
+
+        useful.createLink(terms_tv,
+            "Ao clicar no botão Criar conta, você aceita os termos de privacidade do aplicativo.",
+            "termos de privacidade do aplicativo", object : ClickableSpan() {
+                override fun onClick(widget: View) {
+                    startActivity(Intent(requireActivity(), WebViewActivity::class.java))
+                }
+
+                override fun updateDrawState(ds: TextPaint) {
+                    super.updateDrawState(ds)
+                    // this is where you set link color, underline, typeface etc.
+                    val linkColor = ContextCompat.getColor(requireActivity(), R.color.black)
+                    ds.color = linkColor
+                    ds.isUnderlineText = false
+                    ds.typeface = Typeface.DEFAULT_BOLD
                 }
             })
     }

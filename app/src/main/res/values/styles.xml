@@ -101,4 +101,14 @@
 
 <!--    </style>-->
 
+    <style name="MyTooltip" parent="Widget.MaterialComponents.Tooltip">
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textAppearance">@style/MyTooltip.TextAppearance</item>
+    </style>
+
+    <style name="MyTooltip.TextAppearance" parent="@style/TextAppearance.MaterialComponents.Tooltip">
+        <item name="android:textColor">@color/gray2Application</item>
+        <item name="android:textSize">@dimen/text_size4</item>
+    </style>
+
 </resources>

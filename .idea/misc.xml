@@ -6,6 +6,7 @@
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable-v24/ic_close.xml" value="0.3545" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/bg_top_round.xml" value="0.303" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/gradient_background.xml" value="0.3545" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/horizontal_gray_gradient_background.xml" value="0.3545" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/ic_add.xml" value="0.3545" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/ic_apple_seeklogo.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/ic_arrow_back.xml" value="0.303" />
@@ -24,10 +25,15 @@
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/sh_unselected.xml" value="0.303" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/shape_default_gradient_bt.xml" value="0.303" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/shape_default_radius.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/drawable/shape_main_spinner.xml" value="0.3545" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/activity_webview.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_carrousel_item.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_carrousel_product_item.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_cart_item.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_category.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_category_type_1.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_category_type_2.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_favorite.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_order.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/adapter_order_product.xml" value="0.3625" />
@@ -39,7 +45,10 @@
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/empty_list.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/empty_list_cart.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_cart.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_categories.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_favorites.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_filter.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_filter_results.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_generate_pix.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_generate_ticket.xml" value="0.3625" />
         <entry key="..\:/AndroidStudioProjects/my/AguaDaSerraApp/app/src/main/res/layout/fragment_generic_dialog.xml" value="0.3625" />

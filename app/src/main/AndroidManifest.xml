@@ -25,6 +25,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AguaDaSerraApp"
         tools:targetApi="31">
+
+        <activity
+            android:name=".main_ui.activity.WebViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".main_ui.activity.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

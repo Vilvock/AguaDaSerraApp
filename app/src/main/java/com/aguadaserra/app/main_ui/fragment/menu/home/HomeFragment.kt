@@ -101,7 +101,8 @@ class HomeFragment : BaseFragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.notification_nav -> {
+            R.id.search_nav -> {
+                navigation.navigate(R.id.action_homeFragment_to_filterFragment)
                 super.onOptionsItemSelected(item)
             }
             else -> super.onOptionsItemSelected(item)

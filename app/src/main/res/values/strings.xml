@@ -6,6 +6,17 @@
 
     <string name="default_notification_channel_id">fcm_default_channel</string>
 
+    <string-array name="type_person">
+        <item>Selecione</item>
+        <item>lorem ipsum</item>
+        <item>lorem ipsum</item>
+        <item>lorem ipsum</item>
+        <item>lorem ipsum</item>
+        <item>lorem ipsum</item>
+        <item>lorem ipsum</item>
+        <item>lorem ipsum</item>
+    </string-array>
+
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra fringilla justo a rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In vulputate in diam at faucibus.</string>
     <string name="no_connection">Sem conexão</string>
     <string name="no_connection_description">Certifique-se de que está conectado a internet e tente novamente.</string>

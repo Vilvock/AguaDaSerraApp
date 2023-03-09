@@ -112,6 +112,7 @@
             app:itemIconSize="24dp"
             app:itemIconTint="@drawable/selector_bottom_nav"
             app:menu="@menu/bottom_nav_menu"
+            app:labelVisibilityMode="unlabeled"
             android:visibility="gone"/>
 
     </LinearLayout>
