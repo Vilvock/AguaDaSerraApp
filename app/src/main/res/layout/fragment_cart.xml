@@ -95,7 +95,7 @@
 
                     <Button
                         android:id="@+id/payment_bt"
-                        style="@style/StyleButtonStrokes"
+                        style="@style/StyleButtonSmall"
                         android:layout_marginTop="24dp"
                         android:text="Escolher método de pagamento" />
 

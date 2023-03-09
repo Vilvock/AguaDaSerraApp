@@ -26,8 +26,7 @@
                 app:shapeAppearanceOverlay="@style/minRadiusImageView"
                 android:background="@android:color/transparent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/main_solid_background"
-                app:tint="@color/lightGrayApplication" />
+                android:src="@drawable/main_solid_background" />
 
 
             <LinearLayout

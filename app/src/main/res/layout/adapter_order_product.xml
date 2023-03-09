@@ -26,17 +26,15 @@
                 app:shapeAppearanceOverlay="@style/minRadiusImageView"
                 android:background="@android:color/transparent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/main_solid_background"/>
+                android:src="@drawable/main_solid_background" />
 
 
             <LinearLayout
                 android:id="@+id/container_ll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:layout_marginBottom="12dp"
                 android:layout_toRightOf="@id/avatar_iv"
-                android:layout_alignTop="@id/avatar_iv"
+                android:layout_centerVertical="true"
                 android:orientation="vertical">
 
                 <TextView
@@ -47,14 +45,12 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lastMessage_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/lorem_ipsum"
+                    android:text="Quantidade: 1"
                     android:lines="1"
                     android:ellipsize="end"
                     android:textSize="@dimen/text_size3"/>
-
 
                 <TextView
                     android:id="@+id/valueTv"
@@ -63,55 +59,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="4dp"
                     android:text="R$ 50,00"/>
-
-
-                <View style="@style/Divider.Horizontal"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_marginEnd="4dp"
-                        android:src="@drawable/ic_cart"
-                        android:background="@android:color/transparent"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:text="Adicionar ao carrinho"
-                        android:textSize="@dimen/text_size3"/>
-
-                    <View style="@style/Divider.Vertical"
-                        android:layout_marginStart="6dp"
-                        android:layout_marginEnd="6dp"/>
-
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_marginEnd="4dp"
-                        android:src="@drawable/ic_trash"
-                        android:background="@android:color/transparent"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:text="Remover"
-                        android:textSize="@dimen/text_size3"/>
-
-                </LinearLayout>
-
             </LinearLayout>
-
 
         </RelativeLayout>
 

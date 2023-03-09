@@ -55,7 +55,7 @@ class ProductDetailFragment : BaseFragment() {
         photoList.add(R.drawable.randon3)
         photoList.add(R.drawable.randon4)
 
-        val adapter = CarrouselItemAdapter(photoList)
+        val adapter = CarrouselProductItemAdapter(photoList)
 
 
         carrousel_rv.layoutManager = (object : LinearLayoutManager(requireContext(), HORIZONTAL, false) {

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.aguadaserra.app.R
 import com.aguadaserra.app.global_ui.config_fragment.BaseFragment
+import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.fragment_method_payment.*
 
 /**
@@ -42,6 +43,27 @@ class MethodPaymentFragment : BaseFragment() {
 
         ticket.setOnClickListener {
             navigation.navigate(R.id.action_methodPaymentFragment_to_ticketFragment) }
+
+
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+
+                if (tab!!.position == 0) {
+
+                } else {
+
+                }
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+                TODO("Not yet implemented")
+            }
+
+        })
     }
 
 }
